@@ -136,19 +136,16 @@
     "author" : "hgg:me",
     "codeRepository" : "gh:herminiogg/ShExML",
     "dateCreated" : "2018-02-22",
-    "dateModified" : "2024-04-04",
     "description" : "A heterogeneous data mapping language based on Shape Expressions",
     "developmentStatus" : "active",
     "downloadUrl" : "https://api.github.com/repos/herminiogg/ShExML/{archive_format}{/ref}",
-    "identifier" : "https://doi.org/10.5281/zenodo.11577339",
     "issueTracker" : "https://api.github.com/repos/herminiogg/ShExML/issues{/number}",
     "license" : "https://api.github.com/licenses/mit",
     "name" : "ShExML",
     "programmingLanguage" : "Scala",
-    "releaseNotes" : "<h2>Whats Changed</h2>\n<ul>\n<li>Fixed a problem affecting pushed values</li>\n<li>Fixed some syntax limitations</li>\n<li>JOIN instruction now becomes SUBSTITUTING</li>\n<li>New JOIN instruction performing a classical join between two sets based on a condition</li>\n<li>New IMPORT instruction that allows to import parts of a ShExML script from external files</li>\n</ul>",
     "runtimePlatform" : "JVM",
     "softwareRequirements" : [ "ex:mssql-jdbc", "ex:scala-compiler", "ex:mysql-connector-java", "ex:jena-base", "ex:jena-core", "ex:json-path", "ex:antlr4", "ex:scala-csv_2.13", "ex:scala-reflect", "ex:sqlite-jdbc", "ex:Saxon-HE", "ex:scala3-library_3", "ex:logback-classic", "ex:slf4j-nop", "ex:mariadb-java-client", "ex:scalatest_3", "ex:jena-shacl", "ex:jena-arq", "ex:srdf_3", "ex:stringdistance_2.13", "ex:scala-logging_3", "ex:rmlmapper", "ex:srdf4j_3", "ex:picocli", "ex:postgresql", "ex:shex_3" ],
-    "version" : "0.5.2"
+    "version" : "0.5.3"
   }, {
     "@id" : "hgg:me",
     "@type" : "codemeta:Person",
@@ -219,14 +216,8 @@
       "@id" : "https://w3id.org/codemeta/3.0/downloadUrl",
       "@type" : "@id"
     },
-    "releaseNotes" : {
-      "@id" : "https://w3id.org/codemeta/3.0/releaseNotes"
-    },
     "description" : {
       "@id" : "https://w3id.org/codemeta/3.0/description"
-    },
-    "dateModified" : {
-      "@id" : "https://w3id.org/codemeta/3.0/dateModified"
     },
     "runtimePlatform" : {
       "@id" : "https://w3id.org/codemeta/3.0/runtimePlatform"

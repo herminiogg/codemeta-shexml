@@ -1,7 +1,7 @@
 PREFIX codemeta: <https://w3id.org/codemeta/3.0/>
 PREFIX ex: <http://example.org/>
 SOURCE repo_info <https://api.github.com/repos/herminiogg/ShExML>
-FUNCTIONS helper <scala: https://raw.githubusercontent.com/herminiogg/OC-RSMD-10/main/mapping-workflow/functions.scala>
+FUNCTIONS helper <scala: https://raw.githubusercontent.com/herminiogg/codemeta-shexml/main/functions.scala>
 ITERATOR gh <jsonpath: $> {
     FIELD id <id>
     FIELD name <name>
