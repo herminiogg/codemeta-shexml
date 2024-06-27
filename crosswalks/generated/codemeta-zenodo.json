@@ -1,0 +1,27 @@
+{
+  "@context" : {
+    "@vocab" : "https://w3id.org/codemeta/3.0/",
+    "ex" : "http://example.org/",
+    "license" : {
+      "@type" : "@id"
+    }
+  },
+  "@id" : "ex:ShExML",
+  "@type" : "SoftwareSourceCode",
+  "author" : {
+    "@id" : "ex:Herminio_García_González",
+    "@type" : "Person",
+    "affiliation" : {
+      "@id" : "ex:Kazerne_Dossin",
+      "@type" : "Organization",
+      "name" : "Kazerne Dossin"
+    },
+    "name" : "Herminio García González"
+  },
+  "datePublished" : "2024-04-04",
+  "description" : "<h2>Whats Changed</h2>\n<ul>\n<li>Fixed a problem affecting pushed values</li>\n<li>Fixed some syntax limitations</li>\n<li>JOIN instruction now becomes SUBSTITUTING</li>\n<li>New JOIN instruction performing a classical join between two sets based on a condition</li>\n<li>New IMPORT instruction that allows to import parts of a ShExML script from external files</li>\n</ul>",
+  "identifier" : "11577339",
+  "license" : "https://opensource.org/license/MIT",
+  "name" : "herminiogg/ShExML: Version 0.5.2",
+  "version" : "v0.5.2"
+}

@@ -1,0 +1,26 @@
+PREFIX codemeta: <https://w3id.org/codemeta/3.0/>
+PREFIX ex: <http://example.org/>
+SOURCE repo_info <https://repo1.maven.org/maven2/com/herminiogarcia/shexml_3/0.5.2/shexml_3-0.5.2.pom>
+ITERATOR maven <xpath: /node()[local-name(.)='project']> {
+    FIELD id <node()[local-name(.)='groupId']>
+    FIELD name <node()[local-name(.)='name']>
+    FIELD description <node()[local-name(.)='description']>
+    FIELD codeRepository <node()[local-name(.)='scm']/node()[local-name(.)='url']>
+    FIELD softwareRequirements <node()[local-name(.)='prerequisites']>
+    FIELD license <node()[local-name(.)='licenses']/node()[local-name(.)='license']/node()[local-name(.)='url']>
+    FIELD version <node()[local-name(.)='version']>
+    FIELD continuousIntegration <node()[local-name(.)='continuousIntegration']>
+    FIELD issueTracker <node()[local-name(.)='issueManagement']>
+}
+EXPRESSION md <repo_info.maven>
+
+codemeta:SoftwareSourceCode ex:[md.name] {
+    a codemeta:SoftwareSourceCode ;
+    codemeta:identifier [md.id] ;
+    codemeta:name [md.name] ;
+    codemeta:description [md.description] ;
+    codemeta:codeRepository [md.codeRepository] ;
+    codemeta:license [md.license] ;
+    codemeta:version [md.version] ;
+    codemeta:issueTracker [md.issueTracker] ;
+}

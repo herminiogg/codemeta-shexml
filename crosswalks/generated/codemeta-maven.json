@@ -1,0 +1,34 @@
+{
+  "@id" : "ex:ShExML",
+  "@type" : "codemeta:SoftwareSourceCode",
+  "codeRepository" : "https://github.com/herminiogg/ShExML",
+  "description" : "An heterogeneous data mapping language based on Shape Expressions.",
+  "identifier" : "com.herminiogarcia",
+  "license" : "https://opensource.org/licenses/MIT",
+  "name" : "ShExML",
+  "version" : "0.5.2",
+  "@context" : {
+    "identifier" : {
+      "@id" : "https://w3id.org/codemeta/3.0/identifier"
+    },
+    "name" : {
+      "@id" : "https://w3id.org/codemeta/3.0/name"
+    },
+    "description" : {
+      "@id" : "https://w3id.org/codemeta/3.0/description"
+    },
+    "codeRepository" : {
+      "@id" : "https://w3id.org/codemeta/3.0/codeRepository",
+      "@type" : "@id"
+    },
+    "license" : {
+      "@id" : "https://w3id.org/codemeta/3.0/license",
+      "@type" : "@id"
+    },
+    "version" : {
+      "@id" : "https://w3id.org/codemeta/3.0/version"
+    },
+    "ex" : "http://example.org/",
+    "codemeta" : "https://w3id.org/codemeta/3.0/"
+  }
+}

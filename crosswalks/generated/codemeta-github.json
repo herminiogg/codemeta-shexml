@@ -1,0 +1,57 @@
+{
+  "@id" : "ex:ShExML",
+  "@type" : "codemeta:SoftwareSourceCode",
+  "author" : "https://github.com/herminiogg",
+  "codeRepository" : "https://github.com/herminiogg/ShExML",
+  "dateCreated" : "2018-02-22",
+  "dateModified" : "2024-06-11",
+  "description" : "A heterogeneous data mapping language based on Shape Expressions",
+  "downloadUrl" : "https://api.github.com/repos/herminiogg/ShExML/{archive_format}{/ref}",
+  "identifier" : "122470958",
+  "issueTracker" : "https://api.github.com/repos/herminiogg/ShExML/issues{/number}",
+  "license" : "https://api.github.com/licenses/mit",
+  "name" : "ShExML",
+  "programmingLanguage" : "Scala",
+  "@context" : {
+    "downloadUrl" : {
+      "@id" : "https://w3id.org/codemeta/3.0/downloadUrl",
+      "@type" : "@id"
+    },
+    "name" : {
+      "@id" : "https://w3id.org/codemeta/3.0/name"
+    },
+    "codeRepository" : {
+      "@id" : "https://w3id.org/codemeta/3.0/codeRepository",
+      "@type" : "@id"
+    },
+    "author" : {
+      "@id" : "https://w3id.org/codemeta/3.0/author",
+      "@type" : "@id"
+    },
+    "issueTracker" : {
+      "@id" : "https://w3id.org/codemeta/3.0/issueTracker",
+      "@type" : "@id"
+    },
+    "dateModified" : {
+      "@id" : "https://w3id.org/codemeta/3.0/dateModified"
+    },
+    "description" : {
+      "@id" : "https://w3id.org/codemeta/3.0/description"
+    },
+    "license" : {
+      "@id" : "https://w3id.org/codemeta/3.0/license",
+      "@type" : "@id"
+    },
+    "identifier" : {
+      "@id" : "https://w3id.org/codemeta/3.0/identifier"
+    },
+    "dateCreated" : {
+      "@id" : "https://w3id.org/codemeta/3.0/dateCreated"
+    },
+    "programmingLanguage" : {
+      "@id" : "https://w3id.org/codemeta/3.0/programmingLanguage"
+    },
+    "ex" : "http://example.org/",
+    "codemeta" : "https://w3id.org/codemeta/3.0/"
+  }
+}

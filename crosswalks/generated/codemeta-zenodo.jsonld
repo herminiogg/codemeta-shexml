@@ -1,0 +1,54 @@
+{
+  "@graph" : [ {
+    "@id" : "ex:Herminio_García_González",
+    "@type" : "codemeta:Person",
+    "affiliation" : "ex:Kazerne_Dossin",
+    "name" : "Herminio García González"
+  }, {
+    "@id" : "ex:Kazerne_Dossin",
+    "@type" : "codemeta:Organization",
+    "name" : "Kazerne Dossin"
+  }, {
+    "@id" : "ex:ShExML",
+    "@type" : "codemeta:SoftwareSourceCode",
+    "author" : "ex:Herminio_García_González",
+    "datePublished" : "2024-04-04",
+    "description" : "<h2>Whats Changed</h2>\n<ul>\n<li>Fixed a problem affecting pushed values</li>\n<li>Fixed some syntax limitations</li>\n<li>JOIN instruction now becomes SUBSTITUTING</li>\n<li>New JOIN instruction performing a classical join between two sets based on a condition</li>\n<li>New IMPORT instruction that allows to import parts of a ShExML script from external files</li>\n</ul>",
+    "identifier" : "11577339",
+    "license" : "https://opensource.org/license/MIT",
+    "name" : "herminiogg/ShExML: Version 0.5.2",
+    "version" : "v0.5.2"
+  } ],
+  "@context" : {
+    "name" : {
+      "@id" : "https://w3id.org/codemeta/3.0/name"
+    },
+    "affiliation" : {
+      "@id" : "https://w3id.org/codemeta/3.0/affiliation",
+      "@type" : "@id"
+    },
+    "datePublished" : {
+      "@id" : "https://w3id.org/codemeta/3.0/datePublished"
+    },
+    "license" : {
+      "@id" : "https://w3id.org/codemeta/3.0/license",
+      "@type" : "@id"
+    },
+    "version" : {
+      "@id" : "https://w3id.org/codemeta/3.0/version"
+    },
+    "description" : {
+      "@id" : "https://w3id.org/codemeta/3.0/description"
+    },
+    "identifier" : {
+      "@id" : "https://w3id.org/codemeta/3.0/identifier"
+    },
+    "author" : {
+      "@id" : "https://w3id.org/codemeta/3.0/author",
+      "@type" : "@id"
+    },
+    "schema" : "http://schema.org/",
+    "ex" : "http://example.org/",
+    "codemeta" : "https://w3id.org/codemeta/3.0/"
+  }
+}

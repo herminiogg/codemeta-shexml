@@ -1,0 +1,59 @@
+PREFIX codemeta: <https://w3id.org/codemeta/3.0/>
+PREFIX schema: <http://schema.org/>
+PREFIX ex: <http://example.org/>
+SOURCE zenodo_record <https://zenodo.org/api/records/11577339>
+FUNCTIONS helper <scala: https://raw.githubusercontent.com/herminiogg/OC-RSMD-10/main/mapping-workflow/functions.scala>
+ITERATOR info <jsonpath: $> {
+    FIELD title <title>
+    FIELD codeRepository <metadata.related_identifiers.isSupplementTo>
+    FIELD applicationCategory <communities>
+    FIELD downloadUrl <metadata.related_identifiers.isIdenticalTo>
+    FIELD datePublished <metadata.publication_date>
+    FIELD funder <metadata.contributors.funder>
+    FIELD keywords <metadata.keywords>
+    FIELD license <metadata.license.id>
+    FIELD version <metadata.version>
+    FIELD description <metadata.description>
+    FIELD identifier <id>
+    FIELD funding <metadata.grants.title>
+    FIELD issueTracker <metadata.related_identifiers.isSupplementedBy>
+    ITERATOR author <metadata.creators[*]> {
+        FIELD name <name>
+        FIELD affiliation <affiliation>
+        FIELD identifier <orcid>
+    }
+}
+EXPRESSION zm <zenodo_record.info>
+
+codemeta:SoftwareSourceCode ex:[helper.getNameFromZenodoGithubDeposit(zm.title)] {
+    a codemeta:SoftwareSourceCode ;
+
+    codemeta:codeRepository [zm.codeRepository] ;
+    codemeta:applicationCategory [zm.applicationCategory] ;
+    codemeta:downloadUrl [zm.downloadUrl] ;
+    codemeta:datePublished [zm.datePublished] ;
+    codemeta:funder [zm.funder] ;
+    codemeta:keywords [zm.keywords] ;
+    codemeta:license [helper.licenseToURL(zm.license)] ;
+    codemeta:version [zm.version] ;
+    codemeta:description [zm.description] ;
+    codemeta:identifier [zm.identifier] ;
+    codemeta:name [zm.title] ;
+    codemeta:funding [zm.funding] ;
+    codemeta:issueTracker [zm.issueTracker] ;
+
+    codemeta:author @codemeta:Person ;
+}
+
+codemeta:Person ex:[zm.author.name] {
+    a codemeta:Person ;
+
+    codemeta:name [zm.author.name] ;
+    codemeta:affiliation @codemeta:Organization ;
+    codemeta:identifier [zm.author.identifier] ;
+}
+
+codemeta:Organization ex:[zm.author.affiliation] {
+    a codemeta:Organization ;
+    codemeta:name [zm.author.affiliation] ;
+}

@@ -1,0 +1,28 @@
+{
+    "@context": { 
+        "@vocab": "https://w3id.org/codemeta/3.0/",
+        "identifier": {
+            "@type": "@id"
+        },
+        "codeRepository": {
+            "@type": "@id"
+        },
+        "issueTracker": {
+            "@type": "@id"
+        },
+        "downloadUrl": {
+            "@type": "@id"
+        },
+        "license": {
+            "@type": "@id"
+        }
+
+    },
+    "@id" : "https://github.com/herminiogg/ShExML",
+    "@type": "SoftwareSourceCode",
+    "author": { 
+        "@type": "Person"
+     },
+    "softwareRequirements": { "@type": "SoftwareSourceCode"}
+}
+  

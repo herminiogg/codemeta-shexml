@@ -1,0 +1,105 @@
+PREFIX codemeta: <https://w3id.org/codemeta/3.0/>
+PREFIX schema: <http://schema.org/>
+PREFIX ex: <http://example.org/>
+PREFIX gh: <https://github.com/>
+PREFIX hgg: <https://herminiogarcia.com/#>
+PREFIX kd: <https://kazernedossin.eu/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SOURCE gh_info <https://api.github.com/repos/herminiogg/ShExML>
+SOURCE maven_info <https://repo1.maven.org/maven2/com/herminiogarcia/shexml_3/0.5.2/shexml_3-0.5.2.pom>
+SOURCE zenodo_record <https://zenodo.org/api/records/11577339>
+FUNCTIONS helper <scala: https://raw.githubusercontent.com/herminiogg/OC-RSMD-10/main/mapping-workflow/functions.scala>
+ITERATOR gh <jsonpath: $> {
+    FIELD description <description>
+    FIELD codeRepository <html_url>
+    FIELD language <language>
+    FIELD archiveUrl <archive_url>
+    FIELD author <owner.html_url>
+    FIELD dateCreated <created_at>
+    FIELD dateModified <updated_at>
+    FIELD keywords <topics>
+    FIELD license <license.url>
+    FIELD issueTracker <issues_url>
+}
+ITERATOR maven <xpath: /node()[local-name(.)='project']> {
+    FIELD name <node()[local-name(.)='name']>
+    FIELD version <node()[local-name(.)='version']>
+    FIELD continuousIntegration <node()[local-name(.)='continuousIntegration']>
+    FIELD codeRepository <node()[local-name(.)='scm']/node()[local-name(.)='url']>
+    ITERATOR softwareRequirements <node()[local-name(.)='dependencies']/node()[local-name(.)='dependency']> {
+        FIELD groupdId <node()[local-name(.)='groupId']>
+        FIELD artifactId <node()[local-name(.)='artifactId']>
+        FIELD version <node()[local-name(.)='version']>
+    }
+}
+ITERATOR info <jsonpath: $> {
+    FIELD doi <doi_url>
+    FIELD funding <metadata.grants.internal_id>
+    FIELD funder <metadata.grants.funder.name>
+    FIELD publicationDate <metadata.publication_date>
+    FIELD identifier <id>
+    FIELD releaseNotes <metadata.description>
+    FIELD codeRepository <metadata.custom.code:codeRepository>
+}
+EXPRESSION md <gh_info.gh UNION maven_info.maven UNION zenodo_record.info>
+
+codemeta:SoftwareSourceCode gh:[helper.getLocalPartGithubRepo(md.codeRepository)] {
+    a codemeta:SoftwareSourceCode ;
+
+    #based on the codemeta generator sections
+    #software metadata
+    codemeta:name [md.name] ;
+    codemeta:description [md.description] ;
+    codemeta:dateCreated [helper.onlyDate(md.dateCreated)] ;
+    codemeta:license [md.license] ;
+
+    #discoverability and citation
+    codemeta:identifier [md.doi] ;
+    codemeta:applicationCategory "Computer Science" ;
+    codemeta:keywords [md.keywords] ;
+    codemeta:funding [md.funding] ;
+    codemeta:funder [md.funder] ;
+
+    #development community / tools
+    codemeta:codeRepository [md.codeRepository] ;
+    codemeta:continuousIntegration [md.continuousIntegration] ;
+    codemeta:issueTracker [md.issueTracker] ;
+
+    #run-time environment
+    codemeta:programmingLanguage [md.language] ;
+    codemeta:runtimePlatform "JVM" ;
+    codemeta:softwareRequirements @ex:Dependency ;
+
+    #current version of the software
+    codemeta:version [md.version] ;
+    codemeta:dateModified [md.publicationDate] ;
+    codemeta:downloadUrl [md.archiveUrl] ;
+    codemeta:releaseNotes [md.releaseNotes] ;
+
+    #additional info
+    codemeta:developmentStatus "active" ;
+
+    #authors
+    codemeta:author @ex:Author ;
+} 
+
+ex:Dependency ex:[md.softwareRequirements.artifactId] {
+    a codemeta:SoftwareSourceCode ;
+    codemeta:name [helper.concatenateMavenGroupAndArtifactIds(md.softwareRequirements.groupdId, md.softwareRequirements.artifactId)] ;
+    codemeta:version [md.softwareRequirements.version] ;
+}
+
+# This part can be hardcoded or pulled from another service, e.g.: from a personal webpage providing structured information, Wikidata or the like.
+ex:Author hgg:me {
+    a codemeta:Person ;
+    codemeta:givenName "Herminio" ;
+    codemeta:familyName "García González" ;
+    codemeta:affiliation @ex:Organization ;
+    codemeta:email "herminio.garciagonzalez@kazernedossin.eu" ;
+    codemeta:identifier "https://orcid.org/0000-0001-5590-4857" ;
+}
+
+ex:Organization kd:en {
+    a codemeta:Organization ;
+    codemeta:name "Kazerne Dossin" ;
+}

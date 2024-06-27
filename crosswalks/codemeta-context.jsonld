@@ -1,0 +1,15 @@
+{
+    "@context": { 
+        "@vocab": "https://w3id.org/codemeta/3.0/",
+        "ex" : "http://example.org/",
+        "license": {
+            "@type": "@id"
+        }
+    },
+    "@id" : "http://example.org/ShExML",
+    "@type": "SoftwareSourceCode",
+    "author": {
+        "@type": "Person"
+    }
+}
+  
