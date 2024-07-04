@@ -7,6 +7,8 @@ class Helper {
 
     def concatenateMavenGroupAndArtifactIds(groupdId: String, artifactId: String): String = groupdId + ":" + artifactId
 
+    def removeParametersGithubAPI(url: String): String = url.split("\\{")(0)
+
     def licenseToURL(license: String): String = {
         if(license.contains("mit")) "https://opensource.org/license/MIT"
         else "" // to be completed with more licenses per use case
