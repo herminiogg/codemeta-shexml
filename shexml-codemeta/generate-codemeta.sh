@@ -2,7 +2,7 @@
 
 if ! test -f "generated/shexml.jar"; then
     mkdir generated
-    curl -L https://github.com/herminiogg/ShExML/releases/download/v0.5.2/ShExML-v0.5.2.jar -o generated/shexml.jar
+    curl -L https://github.com/herminiogg/ShExML/releases/download/v0.5.3/ShExML-v0.5.3.jar -o generated/shexml.jar
 fi
 
 # generates the non framed version
