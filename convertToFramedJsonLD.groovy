@@ -24,6 +24,8 @@ ctx.setFrame(frame)
 // Puts the option to omit the @graph in the output
 JsonLdOptions options = new JsonLdOptions();
 options.setOmitGraph(true);
+options.setOmitDefault(true);
+options.setPruneBlankNodeIdentifiers(true);
 ctx.setOptions(options);
 
 def outputStream = new ByteArrayOutputStream()

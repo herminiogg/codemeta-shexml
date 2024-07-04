@@ -1,5 +1,10 @@
 {
   "@graph" : [ {
+    "@id" : "_:b0",
+    "@type" : "codemeta:Role",
+    "author" : "hgg:me",
+    "roleName" : "Main author"
+  }, {
     "@id" : "ex:Saxon-HE",
     "@type" : "codemeta:SoftwareSourceCode",
     "name" : "net.sf.saxon:Saxon-HE",
@@ -130,19 +135,26 @@
     "name" : "com.github.vickumar1981:stringdistance_2.13",
     "version" : "1.2.6"
   }, {
-    "@id" : "gh:herminiogg/ShExML",
+    "@id" : "ghhgg:ShExML",
     "@type" : "codemeta:SoftwareSourceCode",
     "applicationCategory" : "Computer Science",
-    "author" : "hgg:me",
-    "codeRepository" : "gh:herminiogg/ShExML",
+    "codemeta:author" : [ {
+      "@id" : "hgg:me"
+    }, {
+      "@id" : "_:b0"
+    } ],
+    "codeRepository" : "ghhgg:ShExML",
     "dateCreated" : "2018-02-22",
+    "dateModified" : "2024-06-27",
     "description" : "A heterogeneous data mapping language based on Shape Expressions",
     "developmentStatus" : "active",
-    "downloadUrl" : "https://api.github.com/repos/herminiogg/ShExML/{archive_format}{/ref}",
-    "issueTracker" : "https://api.github.com/repos/herminiogg/ShExML/issues{/number}",
+    "downloadUrl" : "https://api.github.com/repos/herminiogg/ShExML/downloads",
+    "issueTracker" : "https://api.github.com/repos/herminiogg/ShExML/issues",
     "license" : "https://api.github.com/licenses/mit",
     "name" : "ShExML",
     "programmingLanguage" : "Scala",
+    "referencePublication" : "https://doi.org/10.7717/peerj-cs.318",
+    "releaseNotes" : "## What's Changed\r\n* Solved a performance problem when executing functions over big data sources",
     "runtimePlatform" : "JVM",
     "softwareRequirements" : [ "ex:mssql-jdbc", "ex:scala-compiler", "ex:mysql-connector-java", "ex:jena-base", "ex:jena-core", "ex:json-path", "ex:antlr4", "ex:scala-csv_2.13", "ex:scala-reflect", "ex:sqlite-jdbc", "ex:Saxon-HE", "ex:scala3-library_3", "ex:logback-classic", "ex:slf4j-nop", "ex:mariadb-java-client", "ex:scalatest_3", "ex:jena-shacl", "ex:jena-arq", "ex:srdf_3", "ex:stringdistance_2.13", "ex:scala-logging_3", "ex:rmlmapper", "ex:srdf4j_3", "ex:picocli", "ex:postgresql", "ex:shex_3" ],
     "version" : "0.5.3"
@@ -183,6 +195,13 @@
     "givenName" : {
       "@id" : "https://w3id.org/codemeta/3.0/givenName"
     },
+    "roleName" : {
+      "@id" : "https://w3id.org/codemeta/3.0/roleName"
+    },
+    "author" : {
+      "@id" : "http://schema.org/author",
+      "@type" : "@id"
+    },
     "developmentStatus" : {
       "@id" : "https://w3id.org/codemeta/3.0/developmentStatus"
     },
@@ -194,27 +213,33 @@
       "@id" : "https://w3id.org/codemeta/3.0/codeRepository",
       "@type" : "@id"
     },
-    "license" : {
-      "@id" : "https://w3id.org/codemeta/3.0/license",
+    "referencePublication" : {
+      "@id" : "https://w3id.org/codemeta/3.0/referencePublication",
       "@type" : "@id"
     },
     "issueTracker" : {
       "@id" : "https://w3id.org/codemeta/3.0/issueTracker",
       "@type" : "@id"
     },
+    "downloadUrl" : {
+      "@id" : "https://w3id.org/codemeta/3.0/downloadUrl",
+      "@type" : "@id"
+    },
+    "license" : {
+      "@id" : "https://w3id.org/codemeta/3.0/license",
+      "@type" : "@id"
+    },
     "programmingLanguage" : {
       "@id" : "https://w3id.org/codemeta/3.0/programmingLanguage"
+    },
+    "dateModified" : {
+      "@id" : "https://w3id.org/codemeta/3.0/dateModified"
     },
     "dateCreated" : {
       "@id" : "https://w3id.org/codemeta/3.0/dateCreated"
     },
-    "author" : {
-      "@id" : "https://w3id.org/codemeta/3.0/author",
-      "@type" : "@id"
-    },
-    "downloadUrl" : {
-      "@id" : "https://w3id.org/codemeta/3.0/downloadUrl",
-      "@type" : "@id"
+    "releaseNotes" : {
+      "@id" : "https://w3id.org/codemeta/3.0/releaseNotes"
     },
     "description" : {
       "@id" : "https://w3id.org/codemeta/3.0/description"
@@ -231,6 +256,7 @@
     "xsd" : "http://www.w3.org/2001/XMLSchema#",
     "hgg" : "https://herminiogarcia.com/#",
     "kd" : "https://kazernedossin.eu/",
+    "ghhgg" : "https://github.com/herminiogg/",
     "codemeta" : "https://w3id.org/codemeta/3.0/"
   }
 }
