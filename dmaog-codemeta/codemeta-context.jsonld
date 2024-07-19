@@ -1,0 +1,40 @@
+{
+    "@context": { 
+        "@vocab": "https://w3id.org/codemeta/3.0/",
+        "schema": "http://schema.org/",
+        "id": "@id",
+        "type": "@type",
+        "identifier": {
+            "@type": "@id"
+        },
+        "codeRepository": {
+            "@type": "@id"
+        },
+        "issueTracker": {
+            "@type": "@id"
+        },
+        "downloadUrl": {
+            "@type": "@id"
+        },
+        "license": {
+            "@type": "@id"
+        },
+        "schema:author": {
+            "@type": "@id"
+        },
+        "referencePublication": {
+            "@type": "@id"
+        }
+    },
+    "@id" : "https://github.com/herminiogg/dmaog",
+    "@type": "SoftwareSourceCode",
+    "author": {
+        "@type": ["Role", "Person"],
+        "schema:author": {
+            "@type": "Person",
+            "@embed": "@never"
+        }
+    },
+    "softwareRequirements": { "@type": "SoftwareSourceCode"}
+}
+  

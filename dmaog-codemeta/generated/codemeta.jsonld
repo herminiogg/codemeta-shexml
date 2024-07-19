@@ -1,0 +1,178 @@
+{
+  "@graph" : [ {
+    "@id" : "_:b0",
+    "@type" : "codemeta:Role",
+    "schema:author" : {
+      "@id" : "hgg:me"
+    },
+    "roleName" : "Main author"
+  }, {
+    "@id" : "ex:jena-arq",
+    "@type" : "codemeta:SoftwareSourceCode",
+    "name" : "org.apache.jena:jena-arq",
+    "version" : "3.8.0"
+  }, {
+    "@id" : "ex:jena-base",
+    "@type" : "codemeta:SoftwareSourceCode",
+    "name" : "org.apache.jena:jena-base",
+    "version" : "3.8.0"
+  }, {
+    "@id" : "ex:jena-core",
+    "@type" : "codemeta:SoftwareSourceCode",
+    "name" : "org.apache.jena:jena-core",
+    "version" : "3.8.0"
+  }, {
+    "@id" : "ex:logback-classic",
+    "@type" : "codemeta:SoftwareSourceCode",
+    "name" : "ch.qos.logback:logback-classic",
+    "version" : "1.3.5"
+  }, {
+    "@id" : "ex:picocli",
+    "@type" : "codemeta:SoftwareSourceCode",
+    "name" : "info.picocli:picocli",
+    "version" : "4.0.4"
+  }, {
+    "@id" : "ex:rmlmapper",
+    "@type" : "codemeta:SoftwareSourceCode",
+    "name" : "be.ugent.rml:rmlmapper",
+    "version" : "4.9.0"
+  }, {
+    "@id" : "ex:scala-logging_3",
+    "@type" : "codemeta:SoftwareSourceCode",
+    "name" : "com.typesafe.scala-logging:scala-logging_3",
+    "version" : "3.9.5"
+  }, {
+    "@id" : "ex:scala3-library_3",
+    "@type" : "codemeta:SoftwareSourceCode",
+    "name" : "org.scala-lang:scala3-library_3",
+    "version" : "3.2.0"
+  }, {
+    "@id" : "ex:scalatest_3",
+    "@type" : "codemeta:SoftwareSourceCode",
+    "name" : "org.scalatest:scalatest_3",
+    "version" : "3.2.9"
+  }, {
+    "@id" : "ex:shexml_3",
+    "@type" : "codemeta:SoftwareSourceCode",
+    "name" : "com.herminiogarcia:shexml_3",
+    "version" : "0.4.0"
+  }, {
+    "@id" : "ghhgg:DMAOG",
+    "dateModified" : "2023-10-13",
+    "releaseNotes" : "## What's Changed\r\n* Solves a problem when generating RDF serialisations from SPARQL endpoints "
+  }, {
+    "@id" : "ghhgg:dmaog",
+    "@type" : "codemeta:SoftwareSourceCode",
+    "applicationCategory" : "Computer Science",
+    "author" : [ "_:b0", "hgg:me" ],
+    "codeRepository" : "ghhgg:dmaog",
+    "dateCreated" : "2021-11-24",
+    "description" : "Data Mapping Access Objects Generator",
+    "developmentStatus" : "active",
+    "downloadUrl" : "https://api.github.com/repos/herminiogg/dmaog/downloads",
+    "identifier" : "https://doi.org/10.5281/zenodo.12782290",
+    "issueTracker" : "https://api.github.com/repos/herminiogg/dmaog/issues",
+    "license" : "https://api.github.com/licenses/mit",
+    "name" : "DMAOG",
+    "programmingLanguage" : "Scala",
+    "runtimePlatform" : "JVM",
+    "softwareRequirements" : [ "ex:picocli", "ex:shexml_3", "ex:jena-arq", "ex:logback-classic", "ex:scala3-library_3", "ex:scalatest_3", "ex:scala-logging_3", "ex:jena-core", "ex:rmlmapper", "ex:jena-base" ],
+    "version" : "0.1.5"
+  }, {
+    "@id" : "hgg:me",
+    "@type" : "codemeta:Person",
+    "affiliation" : "kd:en",
+    "email" : "herminio.garciagonzalez@kazernedossin.eu",
+    "familyName" : "García González",
+    "givenName" : "Herminio",
+    "identifier" : "https://orcid.org/0000-0001-5590-4857"
+  }, {
+    "@id" : "kd:en",
+    "@type" : "codemeta:Organization",
+    "name" : "Kazerne Dossin"
+  } ],
+  "@context" : {
+    "name" : {
+      "@id" : "https://w3id.org/codemeta/3.0/name"
+    },
+    "version" : {
+      "@id" : "https://w3id.org/codemeta/3.0/version"
+    },
+    "author" : {
+      "@id" : "https://w3id.org/codemeta/3.0/author",
+      "@type" : "@id"
+    },
+    "license" : {
+      "@id" : "https://w3id.org/codemeta/3.0/license",
+      "@type" : "@id"
+    },
+    "softwareRequirements" : {
+      "@id" : "https://w3id.org/codemeta/3.0/softwareRequirements",
+      "@type" : "@id"
+    },
+    "programmingLanguage" : {
+      "@id" : "https://w3id.org/codemeta/3.0/programmingLanguage"
+    },
+    "applicationCategory" : {
+      "@id" : "https://w3id.org/codemeta/3.0/applicationCategory"
+    },
+    "identifier" : {
+      "@id" : "https://w3id.org/codemeta/3.0/identifier",
+      "@type" : "@id"
+    },
+    "runtimePlatform" : {
+      "@id" : "https://w3id.org/codemeta/3.0/runtimePlatform"
+    },
+    "issueTracker" : {
+      "@id" : "https://w3id.org/codemeta/3.0/issueTracker",
+      "@type" : "@id"
+    },
+    "dateCreated" : {
+      "@id" : "https://w3id.org/codemeta/3.0/dateCreated"
+    },
+    "description" : {
+      "@id" : "https://w3id.org/codemeta/3.0/description"
+    },
+    "codeRepository" : {
+      "@id" : "https://w3id.org/codemeta/3.0/codeRepository",
+      "@type" : "@id"
+    },
+    "developmentStatus" : {
+      "@id" : "https://w3id.org/codemeta/3.0/developmentStatus"
+    },
+    "downloadUrl" : {
+      "@id" : "https://w3id.org/codemeta/3.0/downloadUrl",
+      "@type" : "@id"
+    },
+    "releaseNotes" : {
+      "@id" : "https://w3id.org/codemeta/3.0/releaseNotes"
+    },
+    "dateModified" : {
+      "@id" : "https://w3id.org/codemeta/3.0/dateModified"
+    },
+    "roleName" : {
+      "@id" : "https://w3id.org/codemeta/3.0/roleName"
+    },
+    "email" : {
+      "@id" : "https://w3id.org/codemeta/3.0/email"
+    },
+    "affiliation" : {
+      "@id" : "https://w3id.org/codemeta/3.0/affiliation",
+      "@type" : "@id"
+    },
+    "familyName" : {
+      "@id" : "https://w3id.org/codemeta/3.0/familyName"
+    },
+    "givenName" : {
+      "@id" : "https://w3id.org/codemeta/3.0/givenName"
+    },
+    "schema" : "http://schema.org/",
+    "gh" : "https://github.com/",
+    "ex" : "http://example.org/",
+    "xsd" : "http://www.w3.org/2001/XMLSchema#",
+    "hgg" : "https://herminiogarcia.com/#",
+    "kd" : "https://kazernedossin.eu/",
+    "ghhgg" : "https://github.com/herminiogg/",
+    "codemeta" : "https://w3id.org/codemeta/3.0/"
+  }
+}
