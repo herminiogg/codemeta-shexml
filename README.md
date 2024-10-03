@@ -1,4 +1,6 @@
 # CodeMeta - ShExML
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.13886201.svg)](https://doi.org/10.5281/zenodo.13886201)
+
 This repository includes a set of resources used to generate CodeMeta files using the ShExML language. These workflows should be treated as examples and therefore they should be adapted to your own use cases.
 
 ## Structure
