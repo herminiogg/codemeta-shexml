@@ -1,8 +1,14 @@
 {
     "@context": { 
         "@vocab": "https://w3id.org/codemeta/3.0/",
-        "ex" : "http://example.org/",
+        "id": "@id",
         "license": {
+            "@type": "@id"
+        },
+        "codeRepository": {
+            "@type": "@id"
+        },
+        "issueTracker": {
             "@type": "@id"
         }
     },
@@ -10,6 +16,7 @@
     "@type": "SoftwareSourceCode",
     "author": {
         "@type": "Person"
-    }
+    },
+    "softwareRequirements": { "@type": "SoftwareSourceCode"}
 }
   

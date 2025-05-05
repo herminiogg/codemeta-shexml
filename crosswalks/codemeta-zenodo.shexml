@@ -1,7 +1,7 @@
 PREFIX codemeta: <https://w3id.org/codemeta/3.0/>
 PREFIX schema: <http://schema.org/>
 PREFIX ex: <http://example.org/>
-SOURCE zenodo_record <https://zenodo.org/api/records/11577339>
+SOURCE zenodo_record <https://zenodo.org/api/records/12569454>
 FUNCTIONS helper <scala: https://raw.githubusercontent.com/herminiogg/codemeta-shexml/main/functions.scala>
 ITERATOR info <jsonpath: $> {
     FIELD title <title>
