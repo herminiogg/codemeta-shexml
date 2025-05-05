@@ -7,11 +7,15 @@ ITERATOR maven <xpath: /node()[local-name(.)='project']> {
     FIELD name <node()[local-name(.)='name']>
     FIELD description <node()[local-name(.)='description']>
     FIELD codeRepository <node()[local-name(.)='scm']/node()[local-name(.)='url']>
-    FIELD prerequisites <node()[local-name(.)='prerequisites']/node()[local-name(.)='maven']>
     FIELD license <node()[local-name(.)='licenses']/node()[local-name(.)='license']/node()[local-name(.)='url']>
     FIELD version <node()[local-name(.)='version']>
     FIELD continuousIntegration <node()[local-name(.)='ciManagement']>
     FIELD issueTracker <node()[local-name(.)='issueManagement']>
+    ITERATOR softwareRequirements <node()[local-name(.)='dependencies']/node()[local-name(.)='dependency']> {
+        FIELD groupdId <node()[local-name(.)='groupId']>
+        FIELD artifactId <node()[local-name(.)='artifactId']>
+        FIELD version <node()[local-name(.)='version']>
+    }
 }
 EXPRESSION md <repo_info.maven>
 
@@ -28,8 +32,8 @@ codemeta:SoftwareSourceCode ex:[md.name] {
     codemeta:softwareRequirements @ex:Dependency ;
 }
 
-ex:Dependency ex:[md.prerequisites] {
+ex:Dependency ex:[md.softwareRequirements.artifactId] {
     a codemeta:SoftwareSourceCode ;
-    codemeta:name "maven" ;
-    codemeta:version [md.prerequisites] ;
+    codemeta:name [helper.concatenateMavenGroupAndArtifactIds(md.softwareRequirements.groupdId, md.softwareRequirements.artifactId)] ;
+    codemeta:version [md.softwareRequirements.version] ;
 }

@@ -1,18 +1,155 @@
 {
-  "@id" : "ex:ShExML",
-  "@type" : "codemeta:SoftwareSourceCode",
-  "codeRepository" : "https://github.com/herminiogg/ShExML",
-  "description" : "An heterogeneous data mapping language based on Shape Expressions.",
-  "identifier" : "com.herminiogarcia",
-  "license" : "https://opensource.org/licenses/MIT",
-  "name" : "ShExML",
-  "version" : "0.5.3",
+  "@graph" : [ {
+    "@id" : "ex:Saxon-HE",
+    "@type" : "codemeta:SoftwareSourceCode",
+    "name" : "net.sf.saxon:Saxon-HE",
+    "version" : "12.4"
+  }, {
+    "@id" : "ex:ShExML",
+    "@type" : "codemeta:SoftwareSourceCode",
+    "codeRepository" : "https://github.com/herminiogg/ShExML",
+    "description" : "An heterogeneous data mapping language based on Shape Expressions.",
+    "identifier" : "com.herminiogarcia",
+    "license" : "https://opensource.org/licenses/MIT",
+    "name" : "ShExML",
+    "softwareRequirements" : [ "ex:slf4j-nop", "ex:postgresql", "ex:sqlite-jdbc", "ex:rmlmapper", "ex:mariadb-java-client", "ex:picocli", "ex:jena-base", "ex:srdf_3", "ex:scala-logging_3", "ex:mssql-jdbc", "ex:jena-core", "ex:stringdistance_2.13", "ex:antlr4", "ex:scala-csv_2.13", "ex:shex_3", "ex:scalatest_3", "ex:Saxon-HE", "ex:logback-classic", "ex:jena-arq", "ex:json-path", "ex:scala3-library_3", "ex:jena-shacl", "ex:mysql-connector-java", "ex:srdf4j_3", "ex:scala-compiler", "ex:scala-reflect" ],
+    "version" : "0.5.3"
+  }, {
+    "@id" : "ex:antlr4",
+    "@type" : "codemeta:SoftwareSourceCode",
+    "name" : "org.antlr:antlr4",
+    "version" : "4.9.2"
+  }, {
+    "@id" : "ex:jena-arq",
+    "@type" : "codemeta:SoftwareSourceCode",
+    "name" : "org.apache.jena:jena-arq",
+    "version" : "3.17.0"
+  }, {
+    "@id" : "ex:jena-base",
+    "@type" : "codemeta:SoftwareSourceCode",
+    "name" : "org.apache.jena:jena-base",
+    "version" : "3.17.0"
+  }, {
+    "@id" : "ex:jena-core",
+    "@type" : "codemeta:SoftwareSourceCode",
+    "name" : "org.apache.jena:jena-core",
+    "version" : "3.17.0"
+  }, {
+    "@id" : "ex:jena-shacl",
+    "@type" : "codemeta:SoftwareSourceCode",
+    "name" : "org.apache.jena:jena-shacl",
+    "version" : "3.17.0"
+  }, {
+    "@id" : "ex:json-path",
+    "@type" : "codemeta:SoftwareSourceCode",
+    "name" : "com.jayway.jsonpath:json-path",
+    "version" : "2.8.0"
+  }, {
+    "@id" : "ex:logback-classic",
+    "@type" : "codemeta:SoftwareSourceCode",
+    "name" : "ch.qos.logback:logback-classic",
+    "version" : "1.3.5"
+  }, {
+    "@id" : "ex:mariadb-java-client",
+    "@type" : "codemeta:SoftwareSourceCode",
+    "name" : "org.mariadb.jdbc:mariadb-java-client",
+    "version" : "2.6.2"
+  }, {
+    "@id" : "ex:mssql-jdbc",
+    "@type" : "codemeta:SoftwareSourceCode",
+    "name" : "com.microsoft.sqlserver:mssql-jdbc",
+    "version" : "8.4.1.jre8"
+  }, {
+    "@id" : "ex:mysql-connector-java",
+    "@type" : "codemeta:SoftwareSourceCode",
+    "name" : "mysql:mysql-connector-java",
+    "version" : "8.0.21"
+  }, {
+    "@id" : "ex:picocli",
+    "@type" : "codemeta:SoftwareSourceCode",
+    "name" : "info.picocli:picocli",
+    "version" : "4.0.4"
+  }, {
+    "@id" : "ex:postgresql",
+    "@type" : "codemeta:SoftwareSourceCode",
+    "name" : "org.postgresql:postgresql",
+    "version" : "42.5.0"
+  }, {
+    "@id" : "ex:rmlmapper",
+    "@type" : "codemeta:SoftwareSourceCode",
+    "name" : "be.ugent.rml:rmlmapper",
+    "version" : "4.9.0"
+  }, {
+    "@id" : "ex:scala-compiler",
+    "@type" : "codemeta:SoftwareSourceCode",
+    "name" : "org.scala-lang:scala-compiler",
+    "version" : "2.13.9"
+  }, {
+    "@id" : "ex:scala-csv_2.13",
+    "@type" : "codemeta:SoftwareSourceCode",
+    "name" : "com.github.tototoshi:scala-csv_2.13",
+    "version" : "1.3.6"
+  }, {
+    "@id" : "ex:scala-logging_3",
+    "@type" : "codemeta:SoftwareSourceCode",
+    "name" : "com.typesafe.scala-logging:scala-logging_3",
+    "version" : "3.9.5"
+  }, {
+    "@id" : "ex:scala-reflect",
+    "@type" : "codemeta:SoftwareSourceCode",
+    "name" : "org.scala-lang:scala-reflect",
+    "version" : "2.13.9"
+  }, {
+    "@id" : "ex:scala3-library_3",
+    "@type" : "codemeta:SoftwareSourceCode",
+    "name" : "org.scala-lang:scala3-library_3",
+    "version" : "3.2.0"
+  }, {
+    "@id" : "ex:scalatest_3",
+    "@type" : "codemeta:SoftwareSourceCode",
+    "name" : "org.scalatest:scalatest_3",
+    "version" : "3.2.9"
+  }, {
+    "@id" : "ex:shex_3",
+    "@type" : "codemeta:SoftwareSourceCode",
+    "name" : "es.weso:shex_3",
+    "version" : "0.1.97"
+  }, {
+    "@id" : "ex:slf4j-nop",
+    "@type" : "codemeta:SoftwareSourceCode",
+    "name" : "org.slf4j:slf4j-nop",
+    "version" : "1.7.27"
+  }, {
+    "@id" : "ex:sqlite-jdbc",
+    "@type" : "codemeta:SoftwareSourceCode",
+    "name" : "org.xerial:sqlite-jdbc",
+    "version" : "3.32.3.2"
+  }, {
+    "@id" : "ex:srdf4j_3",
+    "@type" : "codemeta:SoftwareSourceCode",
+    "name" : "es.weso:srdf4j_3",
+    "version" : "0.1.104"
+  }, {
+    "@id" : "ex:srdf_3",
+    "@type" : "codemeta:SoftwareSourceCode",
+    "name" : "es.weso:srdf_3",
+    "version" : "0.1.104"
+  }, {
+    "@id" : "ex:stringdistance_2.13",
+    "@type" : "codemeta:SoftwareSourceCode",
+    "name" : "com.github.vickumar1981:stringdistance_2.13",
+    "version" : "1.2.6"
+  } ],
   "@context" : {
-    "identifier" : {
-      "@id" : "https://w3id.org/codemeta/3.0/identifier"
-    },
     "name" : {
       "@id" : "https://w3id.org/codemeta/3.0/name"
+    },
+    "version" : {
+      "@id" : "https://w3id.org/codemeta/3.0/version"
+    },
+    "softwareRequirements" : {
+      "@id" : "https://w3id.org/codemeta/3.0/softwareRequirements",
+      "@type" : "@id"
     },
     "description" : {
       "@id" : "https://w3id.org/codemeta/3.0/description"
@@ -25,8 +162,8 @@
       "@id" : "https://w3id.org/codemeta/3.0/license",
       "@type" : "@id"
     },
-    "version" : {
-      "@id" : "https://w3id.org/codemeta/3.0/version"
+    "identifier" : {
+      "@id" : "https://w3id.org/codemeta/3.0/identifier"
     },
     "ex" : "http://example.org/",
     "codemeta" : "https://w3id.org/codemeta/3.0/"
