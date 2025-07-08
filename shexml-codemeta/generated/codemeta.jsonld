@@ -63,7 +63,7 @@
     "@id" : "ex:picocli",
     "@type" : "codemeta:SoftwareSourceCode",
     "name" : "info.picocli:picocli",
-    "version" : "4.0.4"
+    "version" : "4.7.7"
   }, {
     "@id" : "ex:postgresql",
     "@type" : "codemeta:SoftwareSourceCode",
@@ -144,21 +144,22 @@
       "@id" : "_:b0"
     } ],
     "codeRepository" : "ghhgg:ShExML",
+    "contributor" : "niod_staff:mikebryant",
     "dateCreated" : "2018-02-22",
-    "dateModified" : "2024-06-27",
+    "dateModified" : "2025-07-08",
     "description" : "A heterogeneous data mapping language based on Shape Expressions",
     "developmentStatus" : "active",
     "downloadUrl" : "https://api.github.com/repos/herminiogg/ShExML/downloads",
-    "identifier" : "https://doi.org/10.5281/zenodo.12569454",
+    "identifier" : "https://doi.org/10.5281/zenodo.15837379",
     "issueTracker" : "https://api.github.com/repos/herminiogg/ShExML/issues",
     "license" : "https://api.github.com/licenses/mit",
     "name" : "ShExML",
     "programmingLanguage" : "Scala",
     "referencePublication" : "https://doi.org/10.7717/peerj-cs.318",
-    "releaseNotes" : "## What's Changed\r\n* Solved a performance problem when executing functions over big data sources",
+    "releaseNotes" : "## What's Changed\r\n* Fixed a bug which prevented the generation of a subject based on a condition applied down the hierarchy.\r\n* Added the possibility to get the iteration index as part of a new builtin functions mechanism.\r\n* Iterators and fields can now be placed in any order.\r\n* Allowed the option to use dashes in the variables names.\r\n* Added the possibility to pass autoincrement ids as arguments of a function.\r\n* Added an option to precompile the ShExML input (`-pc` in the CLI) to generate a single version with all the imported files incorporated and check the input for syntactic and grammatical errors. (This should facilitate debugging in these kinds of files.)\r\n* Improved the CLI help message, removing unnecessary nesting of options and grouping them by categories.\r\n* The databases needed for some tests can now be set up locally using Docker (thanks @mikesname for this contribution).\r\n\r\n**Full Changelog**: https://github.com/herminiogg/ShExML/compare/v0.5.3...v0.5.4",
     "runtimePlatform" : "JVM",
     "softwareRequirements" : [ "ex:mssql-jdbc", "ex:scala-compiler", "ex:mysql-connector-java", "ex:jena-base", "ex:jena-core", "ex:json-path", "ex:antlr4", "ex:scala-csv_2.13", "ex:scala-reflect", "ex:sqlite-jdbc", "ex:Saxon-HE", "ex:scala3-library_3", "ex:logback-classic", "ex:slf4j-nop", "ex:mariadb-java-client", "ex:scalatest_3", "ex:jena-shacl", "ex:jena-arq", "ex:srdf_3", "ex:stringdistance_2.13", "ex:scala-logging_3", "ex:rmlmapper", "ex:srdf4j_3", "ex:picocli", "ex:postgresql", "ex:shex_3" ],
-    "version" : "0.5.3"
+    "version" : "0.5.4"
   }, {
     "@id" : "hgg:me",
     "@type" : "codemeta:Person",
@@ -171,6 +172,18 @@
     "@id" : "kd:en",
     "@type" : "codemeta:Organization",
     "name" : "Kazerne Dossin"
+  }, {
+    "@id" : "niod:en",
+    "@type" : "codemeta:Organization",
+    "name" : "NIOD Institute for War, Holocaust and Genocide Studies"
+  }, {
+    "@id" : "niod_staff:mikebryant",
+    "@type" : "codemeta:Person",
+    "affiliation" : "niod:en",
+    "email" : "m.bryant@niod.knaw.nl",
+    "familyName" : "Bryant",
+    "givenName" : "Mike",
+    "identifier" : "https://orcid.org/0000-0003-0765-7390"
   } ],
   "@context" : {
     "name" : {
@@ -214,12 +227,12 @@
       "@id" : "https://w3id.org/codemeta/3.0/codeRepository",
       "@type" : "@id"
     },
-    "referencePublication" : {
-      "@id" : "https://w3id.org/codemeta/3.0/referencePublication",
-      "@type" : "@id"
-    },
     "issueTracker" : {
       "@id" : "https://w3id.org/codemeta/3.0/issueTracker",
+      "@type" : "@id"
+    },
+    "referencePublication" : {
+      "@id" : "https://w3id.org/codemeta/3.0/referencePublication",
       "@type" : "@id"
     },
     "downloadUrl" : {
@@ -230,17 +243,21 @@
       "@id" : "https://w3id.org/codemeta/3.0/license",
       "@type" : "@id"
     },
+    "contributor" : {
+      "@id" : "https://w3id.org/codemeta/3.0/contributor",
+      "@type" : "@id"
+    },
     "programmingLanguage" : {
       "@id" : "https://w3id.org/codemeta/3.0/programmingLanguage"
+    },
+    "releaseNotes" : {
+      "@id" : "https://w3id.org/codemeta/3.0/releaseNotes"
     },
     "dateModified" : {
       "@id" : "https://w3id.org/codemeta/3.0/dateModified"
     },
     "dateCreated" : {
       "@id" : "https://w3id.org/codemeta/3.0/dateCreated"
-    },
-    "releaseNotes" : {
-      "@id" : "https://w3id.org/codemeta/3.0/releaseNotes"
     },
     "description" : {
       "@id" : "https://w3id.org/codemeta/3.0/description"
@@ -254,9 +271,11 @@
     "schema" : "http://schema.org/",
     "gh" : "https://github.com/",
     "ex" : "http://example.org/",
+    "niod" : "https://niod.knaw.nl/",
     "xsd" : "http://www.w3.org/2001/XMLSchema#",
     "hgg" : "https://herminiogarcia.com/#",
     "kd" : "https://kazernedossin.eu/",
+    "niod_staff" : "https://niod.knaw.nl/en/staff/",
     "ghhgg" : "https://github.com/herminiogg/",
     "codemeta" : "https://w3id.org/codemeta/3.0/"
   }

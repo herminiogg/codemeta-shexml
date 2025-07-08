@@ -16,7 +16,7 @@
   "@type" : "SoftwareSourceCode",
   "codeRepository" : "https://github.com/herminiogg/ShExML",
   "dateCreated" : "2018-02-22",
-  "dateModified" : "2025-03-05",
+  "dateModified" : "2025-07-08",
   "description" : "A heterogeneous data mapping language based on Shape Expressions",
   "identifier" : "122470958",
   "license" : "https://api.github.com/licenses/mit",
