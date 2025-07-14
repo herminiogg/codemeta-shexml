@@ -1,154 +1,45 @@
 {
   "@context" : {
     "@vocab" : "https://w3id.org/codemeta/3.0/",
+    "schema" : "http://schema.org/",
     "id" : "@id",
-    "license" : {
-      "@type" : "@id"
+    "type" : "@type",
+    "name" : {
+      "@id" : "schema:name"
+    },
+    "version" : {
+      "@id" : "schema:version"
+    },
+    "softwareRequirements" : {
+      "@id" : "schema:softwareRequirements",
+      "@type" : "@id",
+      "@container" : "@set"
     },
     "codeRepository" : {
+      "@id" : "schema:codeRepository",
       "@type" : "@id"
     },
-    "issueTracker" : {
+    "description" : {
+      "@id" : "schema:description"
+    },
+    "identifier" : {
+      "@id" : "schema:identifier"
+    },
+    "license" : {
+      "@id" : "schema:license",
       "@type" : "@id"
+    },
+    "SoftwareSourceCode" : {
+      "@id" : "schema:SoftwareSourceCode"
     }
   },
   "id" : "http://example.org/ShExML",
-  "@type" : "SoftwareSourceCode",
+  "type" : "SoftwareSourceCode",
   "codeRepository" : "https://github.com/herminiogg/ShExML",
-  "description" : "An heterogeneous data mapping language based on Shape Expressions.",
+  "description" : "A heterogeneous data mapping language based on Shape Expressions.",
   "identifier" : "com.herminiogarcia",
   "license" : "https://opensource.org/licenses/MIT",
   "name" : "ShExML",
-  "softwareRequirements" : [ {
-    "id" : "http://example.org/scala-reflect",
-    "@type" : "SoftwareSourceCode",
-    "name" : "org.scala-lang:scala-reflect",
-    "version" : "2.13.9"
-  }, {
-    "id" : "http://example.org/srdf4j_3",
-    "@type" : "SoftwareSourceCode",
-    "name" : "es.weso:srdf4j_3",
-    "version" : "0.1.104"
-  }, {
-    "id" : "http://example.org/scala-compiler",
-    "@type" : "SoftwareSourceCode",
-    "name" : "org.scala-lang:scala-compiler",
-    "version" : "2.13.9"
-  }, {
-    "id" : "http://example.org/mysql-connector-java",
-    "@type" : "SoftwareSourceCode",
-    "name" : "mysql:mysql-connector-java",
-    "version" : "8.0.21"
-  }, {
-    "id" : "http://example.org/jena-shacl",
-    "@type" : "SoftwareSourceCode",
-    "name" : "org.apache.jena:jena-shacl",
-    "version" : "3.17.0"
-  }, {
-    "id" : "http://example.org/scala3-library_3",
-    "@type" : "SoftwareSourceCode",
-    "name" : "org.scala-lang:scala3-library_3",
-    "version" : "3.2.0"
-  }, {
-    "id" : "http://example.org/jena-arq",
-    "@type" : "SoftwareSourceCode",
-    "name" : "org.apache.jena:jena-arq",
-    "version" : "3.17.0"
-  }, {
-    "id" : "http://example.org/json-path",
-    "@type" : "SoftwareSourceCode",
-    "name" : "com.jayway.jsonpath:json-path",
-    "version" : "2.8.0"
-  }, {
-    "id" : "http://example.org/Saxon-HE",
-    "@type" : "SoftwareSourceCode",
-    "name" : "net.sf.saxon:Saxon-HE",
-    "version" : "12.4"
-  }, {
-    "id" : "http://example.org/logback-classic",
-    "@type" : "SoftwareSourceCode",
-    "name" : "ch.qos.logback:logback-classic",
-    "version" : "1.3.5"
-  }, {
-    "id" : "http://example.org/scalatest_3",
-    "@type" : "SoftwareSourceCode",
-    "name" : "org.scalatest:scalatest_3",
-    "version" : "3.2.9"
-  }, {
-    "id" : "http://example.org/shex_3",
-    "@type" : "SoftwareSourceCode",
-    "name" : "es.weso:shex_3",
-    "version" : "0.1.97"
-  }, {
-    "id" : "http://example.org/scala-csv_2.13",
-    "@type" : "SoftwareSourceCode",
-    "name" : "com.github.tototoshi:scala-csv_2.13",
-    "version" : "1.3.6"
-  }, {
-    "id" : "http://example.org/antlr4",
-    "@type" : "SoftwareSourceCode",
-    "name" : "org.antlr:antlr4",
-    "version" : "4.9.2"
-  }, {
-    "id" : "http://example.org/stringdistance_2.13",
-    "@type" : "SoftwareSourceCode",
-    "name" : "com.github.vickumar1981:stringdistance_2.13",
-    "version" : "1.2.6"
-  }, {
-    "id" : "http://example.org/jena-core",
-    "@type" : "SoftwareSourceCode",
-    "name" : "org.apache.jena:jena-core",
-    "version" : "3.17.0"
-  }, {
-    "id" : "http://example.org/mssql-jdbc",
-    "@type" : "SoftwareSourceCode",
-    "name" : "com.microsoft.sqlserver:mssql-jdbc",
-    "version" : "8.4.1.jre8"
-  }, {
-    "id" : "http://example.org/srdf_3",
-    "@type" : "SoftwareSourceCode",
-    "name" : "es.weso:srdf_3",
-    "version" : "0.1.104"
-  }, {
-    "id" : "http://example.org/scala-logging_3",
-    "@type" : "SoftwareSourceCode",
-    "name" : "com.typesafe.scala-logging:scala-logging_3",
-    "version" : "3.9.5"
-  }, {
-    "id" : "http://example.org/jena-base",
-    "@type" : "SoftwareSourceCode",
-    "name" : "org.apache.jena:jena-base",
-    "version" : "3.17.0"
-  }, {
-    "id" : "http://example.org/picocli",
-    "@type" : "SoftwareSourceCode",
-    "name" : "info.picocli:picocli",
-    "version" : "4.0.4"
-  }, {
-    "id" : "http://example.org/mariadb-java-client",
-    "@type" : "SoftwareSourceCode",
-    "name" : "org.mariadb.jdbc:mariadb-java-client",
-    "version" : "2.6.2"
-  }, {
-    "id" : "http://example.org/sqlite-jdbc",
-    "@type" : "SoftwareSourceCode",
-    "name" : "org.xerial:sqlite-jdbc",
-    "version" : "3.32.3.2"
-  }, {
-    "id" : "http://example.org/rmlmapper",
-    "@type" : "SoftwareSourceCode",
-    "name" : "be.ugent.rml:rmlmapper",
-    "version" : "4.9.0"
-  }, {
-    "id" : "http://example.org/postgresql",
-    "@type" : "SoftwareSourceCode",
-    "name" : "org.postgresql:postgresql",
-    "version" : "42.5.0"
-  }, {
-    "id" : "http://example.org/slf4j-nop",
-    "@type" : "SoftwareSourceCode",
-    "name" : "org.slf4j:slf4j-nop",
-    "version" : "1.7.27"
-  } ],
-  "version" : "0.5.3"
+  "softwareRequirements" : [ "http://example.org/jena-base", "http://example.org/mariadb-java-client", "http://example.org/srdf_3", "http://example.org/mysql-connector-java", "http://example.org/scala-reflect", "http://example.org/json-path", "http://example.org/jena-core", "http://example.org/postgresql", "http://example.org/stringdistance_2.13", "http://example.org/mssql-jdbc", "http://example.org/scala-compiler", "http://example.org/scala-logging_3", "http://example.org/shex_3", "http://example.org/sqlite-jdbc", "http://example.org/antlr4", "http://example.org/picocli", "http://example.org/jena-shacl", "http://example.org/rmlmapper", "http://example.org/Saxon-HE", "http://example.org/scalatest_3", "http://example.org/scala-csv_2.13", "http://example.org/scala3-library_3", "http://example.org/jena-arq", "http://example.org/logback-classic", "http://example.org/slf4j-nop", "http://example.org/srdf4j_3" ],
+  "version" : "0.5.4"
 }

@@ -1,1 +1,4 @@
 *.jar
+apache-jena*
+shexCommandOutput.txt
+validationReport.txt

@@ -1,167 +1,163 @@
 {
   "@graph" : [ {
     "@id" : "_:b0",
-    "@type" : "codemeta:Role",
-    "author" : "hgg:me",
+    "@type" : "schema:Role",
     "roleName" : "Main author"
   }, {
     "@id" : "ex:Saxon-HE",
-    "@type" : "codemeta:SoftwareSourceCode",
+    "@type" : "schema:SoftwareSourceCode",
     "name" : "net.sf.saxon:Saxon-HE",
     "version" : "12.4"
   }, {
     "@id" : "ex:antlr4",
-    "@type" : "codemeta:SoftwareSourceCode",
+    "@type" : "schema:SoftwareSourceCode",
     "name" : "org.antlr:antlr4",
     "version" : "4.9.2"
   }, {
     "@id" : "ex:jena-arq",
-    "@type" : "codemeta:SoftwareSourceCode",
+    "@type" : "schema:SoftwareSourceCode",
     "name" : "org.apache.jena:jena-arq",
     "version" : "3.17.0"
   }, {
     "@id" : "ex:jena-base",
-    "@type" : "codemeta:SoftwareSourceCode",
+    "@type" : "schema:SoftwareSourceCode",
     "name" : "org.apache.jena:jena-base",
     "version" : "3.17.0"
   }, {
     "@id" : "ex:jena-core",
-    "@type" : "codemeta:SoftwareSourceCode",
+    "@type" : "schema:SoftwareSourceCode",
     "name" : "org.apache.jena:jena-core",
     "version" : "3.17.0"
   }, {
     "@id" : "ex:jena-shacl",
-    "@type" : "codemeta:SoftwareSourceCode",
+    "@type" : "schema:SoftwareSourceCode",
     "name" : "org.apache.jena:jena-shacl",
     "version" : "3.17.0"
   }, {
     "@id" : "ex:json-path",
-    "@type" : "codemeta:SoftwareSourceCode",
+    "@type" : "schema:SoftwareSourceCode",
     "name" : "com.jayway.jsonpath:json-path",
     "version" : "2.8.0"
   }, {
     "@id" : "ex:logback-classic",
-    "@type" : "codemeta:SoftwareSourceCode",
+    "@type" : "schema:SoftwareSourceCode",
     "name" : "ch.qos.logback:logback-classic",
     "version" : "1.3.5"
   }, {
     "@id" : "ex:mariadb-java-client",
-    "@type" : "codemeta:SoftwareSourceCode",
+    "@type" : "schema:SoftwareSourceCode",
     "name" : "org.mariadb.jdbc:mariadb-java-client",
     "version" : "2.6.2"
   }, {
     "@id" : "ex:mssql-jdbc",
-    "@type" : "codemeta:SoftwareSourceCode",
+    "@type" : "schema:SoftwareSourceCode",
     "name" : "com.microsoft.sqlserver:mssql-jdbc",
     "version" : "8.4.1.jre8"
   }, {
     "@id" : "ex:mysql-connector-java",
-    "@type" : "codemeta:SoftwareSourceCode",
+    "@type" : "schema:SoftwareSourceCode",
     "name" : "mysql:mysql-connector-java",
     "version" : "8.0.21"
   }, {
     "@id" : "ex:picocli",
-    "@type" : "codemeta:SoftwareSourceCode",
+    "@type" : "schema:SoftwareSourceCode",
     "name" : "info.picocli:picocli",
-    "version" : "4.0.4"
+    "version" : "4.7.7"
   }, {
     "@id" : "ex:postgresql",
-    "@type" : "codemeta:SoftwareSourceCode",
+    "@type" : "schema:SoftwareSourceCode",
     "name" : "org.postgresql:postgresql",
     "version" : "42.5.0"
   }, {
     "@id" : "ex:rmlmapper",
-    "@type" : "codemeta:SoftwareSourceCode",
+    "@type" : "schema:SoftwareSourceCode",
     "name" : "be.ugent.rml:rmlmapper",
     "version" : "4.9.0"
   }, {
     "@id" : "ex:scala-compiler",
-    "@type" : "codemeta:SoftwareSourceCode",
+    "@type" : "schema:SoftwareSourceCode",
     "name" : "org.scala-lang:scala-compiler",
     "version" : "2.13.9"
   }, {
     "@id" : "ex:scala-csv_2.13",
-    "@type" : "codemeta:SoftwareSourceCode",
+    "@type" : "schema:SoftwareSourceCode",
     "name" : "com.github.tototoshi:scala-csv_2.13",
     "version" : "1.3.6"
   }, {
     "@id" : "ex:scala-logging_3",
-    "@type" : "codemeta:SoftwareSourceCode",
+    "@type" : "schema:SoftwareSourceCode",
     "name" : "com.typesafe.scala-logging:scala-logging_3",
     "version" : "3.9.5"
   }, {
     "@id" : "ex:scala-reflect",
-    "@type" : "codemeta:SoftwareSourceCode",
+    "@type" : "schema:SoftwareSourceCode",
     "name" : "org.scala-lang:scala-reflect",
     "version" : "2.13.9"
   }, {
     "@id" : "ex:scala3-library_3",
-    "@type" : "codemeta:SoftwareSourceCode",
+    "@type" : "schema:SoftwareSourceCode",
     "name" : "org.scala-lang:scala3-library_3",
     "version" : "3.2.0"
   }, {
     "@id" : "ex:scalatest_3",
-    "@type" : "codemeta:SoftwareSourceCode",
+    "@type" : "schema:SoftwareSourceCode",
     "name" : "org.scalatest:scalatest_3",
     "version" : "3.2.9"
   }, {
     "@id" : "ex:shex_3",
-    "@type" : "codemeta:SoftwareSourceCode",
+    "@type" : "schema:SoftwareSourceCode",
     "name" : "es.weso:shex_3",
     "version" : "0.1.97"
   }, {
     "@id" : "ex:slf4j-nop",
-    "@type" : "codemeta:SoftwareSourceCode",
+    "@type" : "schema:SoftwareSourceCode",
     "name" : "org.slf4j:slf4j-nop",
     "version" : "1.7.27"
   }, {
     "@id" : "ex:sqlite-jdbc",
-    "@type" : "codemeta:SoftwareSourceCode",
+    "@type" : "schema:SoftwareSourceCode",
     "name" : "org.xerial:sqlite-jdbc",
     "version" : "3.32.3.2"
   }, {
     "@id" : "ex:srdf4j_3",
-    "@type" : "codemeta:SoftwareSourceCode",
+    "@type" : "schema:SoftwareSourceCode",
     "name" : "es.weso:srdf4j_3",
     "version" : "0.1.104"
   }, {
     "@id" : "ex:srdf_3",
-    "@type" : "codemeta:SoftwareSourceCode",
+    "@type" : "schema:SoftwareSourceCode",
     "name" : "es.weso:srdf_3",
     "version" : "0.1.104"
   }, {
     "@id" : "ex:stringdistance_2.13",
-    "@type" : "codemeta:SoftwareSourceCode",
+    "@type" : "schema:SoftwareSourceCode",
     "name" : "com.github.vickumar1981:stringdistance_2.13",
     "version" : "1.2.6"
   }, {
     "@id" : "ghhgg:ShExML",
-    "@type" : "codemeta:SoftwareSourceCode",
+    "@type" : "schema:SoftwareSourceCode",
     "applicationCategory" : "Computer Science",
-    "codemeta:author" : [ {
-      "@id" : "hgg:me"
-    }, {
-      "@id" : "_:b0"
-    } ],
+    "author" : [ "hgg:me", "_:b0" ],
     "codeRepository" : "ghhgg:ShExML",
+    "contributor" : "niod_staff:mikebryant",
     "dateCreated" : "2018-02-22",
-    "dateModified" : "2024-06-27",
+    "dateModified" : "2025-07-08",
     "description" : "A heterogeneous data mapping language based on Shape Expressions",
     "developmentStatus" : "active",
     "downloadUrl" : "https://api.github.com/repos/herminiogg/ShExML/downloads",
-    "identifier" : "https://doi.org/10.5281/zenodo.12569454",
-    "issueTracker" : "https://api.github.com/repos/herminiogg/ShExML/issues",
+    "identifier" : "https://doi.org/10.5281/zenodo.15837379",
     "license" : "https://api.github.com/licenses/mit",
     "name" : "ShExML",
     "programmingLanguage" : "Scala",
-    "referencePublication" : "https://doi.org/10.7717/peerj-cs.318",
-    "releaseNotes" : "## What's Changed\r\n* Solved a performance problem when executing functions over big data sources",
+    "releaseNotes" : "## What's Changed\r\n* Fixed a bug which prevented the generation of a subject based on a condition applied down the hierarchy.\r\n* Added the possibility to get the iteration index as part of a new builtin functions mechanism.\r\n* Iterators and fields can now be placed in any order.\r\n* Allowed the option to use dashes in the variables names.\r\n* Added the possibility to pass autoincrement ids as arguments of a function.\r\n* Added an option to precompile the ShExML input (`-pc` in the CLI) to generate a single version with all the imported files incorporated and check the input for syntactic and grammatical errors. (This should facilitate debugging in these kinds of files.)\r\n* Improved the CLI help message, removing unnecessary nesting of options and grouping them by categories.\r\n* The databases needed for some tests can now be set up locally using Docker (thanks @mikesname for this contribution).\r\n\r\n**Full Changelog**: https://github.com/herminiogg/ShExML/compare/v0.5.3...v0.5.4",
     "runtimePlatform" : "JVM",
-    "softwareRequirements" : [ "ex:mssql-jdbc", "ex:scala-compiler", "ex:mysql-connector-java", "ex:jena-base", "ex:jena-core", "ex:json-path", "ex:antlr4", "ex:scala-csv_2.13", "ex:scala-reflect", "ex:sqlite-jdbc", "ex:Saxon-HE", "ex:scala3-library_3", "ex:logback-classic", "ex:slf4j-nop", "ex:mariadb-java-client", "ex:scalatest_3", "ex:jena-shacl", "ex:jena-arq", "ex:srdf_3", "ex:stringdistance_2.13", "ex:scala-logging_3", "ex:rmlmapper", "ex:srdf4j_3", "ex:picocli", "ex:postgresql", "ex:shex_3" ],
-    "version" : "0.5.3"
+    "softwareRequirements" : [ "ex:scala-reflect", "ex:scala-csv_2.13", "ex:scalatest_3", "ex:sqlite-jdbc", "ex:mariadb-java-client", "ex:antlr4", "ex:slf4j-nop", "ex:srdf4j_3", "ex:jena-arq", "ex:scala-logging_3", "ex:shex_3", "ex:scala3-library_3", "ex:postgresql", "ex:picocli", "ex:json-path", "ex:mssql-jdbc", "ex:srdf_3", "ex:jena-base", "ex:rmlmapper", "ex:stringdistance_2.13", "ex:mysql-connector-java", "ex:scala-compiler", "ex:jena-core", "ex:logback-classic", "ex:Saxon-HE", "ex:jena-shacl" ],
+    "version" : "0.5.4",
+    "issueTracker" : "https://api.github.com/repos/herminiogg/ShExML/issues",
+    "referencePublication" : "https://doi.org/10.7717/peerj-cs.318"
   }, {
     "@id" : "hgg:me",
-    "@type" : "codemeta:Person",
+    "@type" : "schema:Person",
     "affiliation" : "kd:en",
     "email" : "herminio.garciagonzalez@kazernedossin.eu",
     "familyName" : "García González",
@@ -169,94 +165,114 @@
     "identifier" : "https://orcid.org/0000-0001-5590-4857"
   }, {
     "@id" : "kd:en",
-    "@type" : "codemeta:Organization",
+    "@type" : "schema:Organization",
     "name" : "Kazerne Dossin"
+  }, {
+    "@id" : "niod:en",
+    "@type" : "schema:Organization",
+    "name" : "NIOD Institute for War, Holocaust and Genocide Studies"
+  }, {
+    "@id" : "niod_staff:mikebryant",
+    "@type" : "schema:Person",
+    "affiliation" : "niod:en",
+    "email" : "m.bryant@niod.knaw.nl",
+    "familyName" : "Bryant",
+    "givenName" : "Mike",
+    "identifier" : "https://orcid.org/0000-0003-0765-7390"
   } ],
   "@context" : {
     "name" : {
-      "@id" : "https://w3id.org/codemeta/3.0/name"
+      "@id" : "http://schema.org/name"
     },
     "version" : {
-      "@id" : "https://w3id.org/codemeta/3.0/version"
+      "@id" : "http://schema.org/version"
     },
     "identifier" : {
-      "@id" : "https://w3id.org/codemeta/3.0/identifier",
+      "@id" : "http://schema.org/identifier",
       "@type" : "@id"
     },
     "email" : {
-      "@id" : "https://w3id.org/codemeta/3.0/email"
+      "@id" : "http://schema.org/email"
     },
     "affiliation" : {
-      "@id" : "https://w3id.org/codemeta/3.0/affiliation",
+      "@id" : "http://schema.org/affiliation",
       "@type" : "@id"
     },
     "familyName" : {
-      "@id" : "https://w3id.org/codemeta/3.0/familyName"
+      "@id" : "http://schema.org/familyName"
     },
     "givenName" : {
-      "@id" : "https://w3id.org/codemeta/3.0/givenName"
+      "@id" : "http://schema.org/givenName"
     },
     "roleName" : {
-      "@id" : "https://w3id.org/codemeta/3.0/roleName"
+      "@id" : "http://schema.org/roleName"
     },
     "author" : {
       "@id" : "http://schema.org/author",
       "@type" : "@id"
     },
-    "developmentStatus" : {
-      "@id" : "https://w3id.org/codemeta/3.0/developmentStatus"
+    "dateCreated" : {
+      "@id" : "http://schema.org/dateCreated",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
     },
     "softwareRequirements" : {
-      "@id" : "https://w3id.org/codemeta/3.0/softwareRequirements",
+      "@id" : "http://schema.org/softwareRequirements",
       "@type" : "@id"
     },
-    "codeRepository" : {
-      "@id" : "https://w3id.org/codemeta/3.0/codeRepository",
+    "developmentStatus" : {
+      "@id" : "http://schema.org/developmentStatus"
+    },
+    "issueTracker" : {
+      "@id" : "https://w3id.org/codemeta/3.0/issueTracker",
       "@type" : "@id"
     },
     "referencePublication" : {
       "@id" : "https://w3id.org/codemeta/3.0/referencePublication",
       "@type" : "@id"
     },
-    "issueTracker" : {
-      "@id" : "https://w3id.org/codemeta/3.0/issueTracker",
+    "applicationCategory" : {
+      "@id" : "http://schema.org/applicationCategory"
+    },
+    "dateModified" : {
+      "@id" : "http://schema.org/dateModified",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "runtimePlatform" : {
+      "@id" : "http://schema.org/runtimePlatform"
+    },
+    "codeRepository" : {
+      "@id" : "http://schema.org/codeRepository",
       "@type" : "@id"
     },
+    "description" : {
+      "@id" : "http://schema.org/description"
+    },
     "downloadUrl" : {
-      "@id" : "https://w3id.org/codemeta/3.0/downloadUrl",
+      "@id" : "http://schema.org/downloadUrl",
       "@type" : "@id"
     },
     "license" : {
-      "@id" : "https://w3id.org/codemeta/3.0/license",
+      "@id" : "http://schema.org/license",
       "@type" : "@id"
     },
     "programmingLanguage" : {
-      "@id" : "https://w3id.org/codemeta/3.0/programmingLanguage"
+      "@id" : "http://schema.org/programmingLanguage"
     },
-    "dateModified" : {
-      "@id" : "https://w3id.org/codemeta/3.0/dateModified"
-    },
-    "dateCreated" : {
-      "@id" : "https://w3id.org/codemeta/3.0/dateCreated"
+    "contributor" : {
+      "@id" : "http://schema.org/contributor",
+      "@type" : "@id"
     },
     "releaseNotes" : {
-      "@id" : "https://w3id.org/codemeta/3.0/releaseNotes"
-    },
-    "description" : {
-      "@id" : "https://w3id.org/codemeta/3.0/description"
-    },
-    "runtimePlatform" : {
-      "@id" : "https://w3id.org/codemeta/3.0/runtimePlatform"
-    },
-    "applicationCategory" : {
-      "@id" : "https://w3id.org/codemeta/3.0/applicationCategory"
+      "@id" : "http://schema.org/releaseNotes"
     },
     "schema" : "http://schema.org/",
     "gh" : "https://github.com/",
     "ex" : "http://example.org/",
+    "niod" : "https://niod.knaw.nl/",
     "xsd" : "http://www.w3.org/2001/XMLSchema#",
     "hgg" : "https://herminiogarcia.com/#",
     "kd" : "https://kazernedossin.eu/",
+    "niod_staff" : "https://niod.knaw.nl/en/staff/",
     "ghhgg" : "https://github.com/herminiogg/",
     "codemeta" : "https://w3id.org/codemeta/3.0/"
   }

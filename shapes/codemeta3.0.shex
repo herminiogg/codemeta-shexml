@@ -1,0 +1,137 @@
+PREFIX codemeta: <https://w3id.org/codemeta/3.0/>
+PREFIX schema: <http://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+<Software> @schema:Thing AND IRI AND {
+	# Properties from schema.org
+	rdf:type [ schema:SoftwareSourceCode schema:SoftwareApplication ] ;
+	schema:applicationCategory xsd:string OR IRI ? ;
+	schema:applicationSubCategory xsd:string OR IRI ? ;
+	schema:author @schema:Person OR @schema:Organization OR @schema:Role * ;
+	schema:citation @schema:CreativeWork OR IRI ? ;
+	schema:codeRepository IRI ? ;
+	schema:contributor @schema:Person OR @schema:Organization * ;
+	schema:copyrightHolder @schema:Person OR @schema:Organization * ;
+	schema:copyrightYear xsd:integer ? ;
+	schema:dateCreated xsd:date ? ;
+	schema:dateModified xsd:date ? ;
+	schema:datePublished xsd:date ? ;
+	schema:downloadUrl IRI ? ;
+	schema:editor @schema:Person * ;
+	schema:encoding @schema:MediaObject ? ;
+	schema:fileFormat xsd:string OR IRI ? ;
+	schema:fileSize xsd:string ? ;
+	schema:funder @schema:Organization OR @schema:Person * ;
+	schema:hasPart @schema:CreativeWork * ;
+	schema:installUrl IRI ? ;
+	schema:isAccessibleForFree xsd:boolean ? ;
+	schema:isPartOf @schema:CreativeWork * ;
+	schema:keywords xsd:string * ;
+	schema:license @schema:CreativeWork OR IRI ? ;
+	schema:memoryRequirements xsd:string OR IRI ? ;
+	schema:operatingSystem xsd:string ? ;
+	schema:permissions xsd:string ? ;
+	schema:position xsd:integer OR xsd:string ? ;
+	schema:processorRequirements xsd:string ? ;
+	schema:producer @schema:Organization OR @schema:Person * ;
+	schema:programmingLanguage @schema:ComputerLanguage OR xsd:string * ;
+	schema:provider @schema:Organization OR @schema:Person ? ;
+	schema:publisher @schema:Organization OR @schema:Person ? ;
+	schema:relatedLink IRI * ;
+	schema:releaseNotes xsd:string OR IRI ? ;
+	schema:review @schema:Review * ;
+	schema:runtimePlatform xsd:string * ;
+	schema:softwareHelp @schema:CreativeWork ? ;
+	schema:softwareRequirements @<Software> * ;
+	schema:softwareVersion xsd:string ? ;
+	schema:sponsor @schema:Organization OR @schema:Person * ;
+	schema:storageRequirements xsd:string OR IRI ? ;
+	schema:supportingData @schema:DataFeed ? ;
+	schema:targetProduct @schema:SoftwareApplication ? ;
+	schema:version xsd:string OR xsd:integer ? ;
+	
+	# Properties from CodeMeta
+	codemeta:buildInstructions IRI ? ;
+	codemeta:continuousIntegration IRI ? ;
+	codemeta:developmentStatus xsd:string ? ;
+	codemeta:embargoEndDate xsd:date ? ;
+	codemeta:funding xsd:string * ;
+	codemeta:hasSourceCode @schema:SoftwareSourceCode ? ;
+	codemeta:isSourceCodeOf @schema:SoftwareSourceCode ? ;
+	codemeta:issueTracker IRI ? ;
+	codemeta:maintainer @schema:Person * ;
+	codemeta:readme IRI ? ;
+	codemeta:referencePublication @schema:ScholarlyArticle OR IRI ? ;
+	codemeta:softwareSuggestions @schema:SoftwareSourceCode * ;
+}
+
+schema:SoftwareApplication @<Sofware> AND {
+	rdf:type [ schema:SoftwareApplication ] ;
+}
+
+schema:SoftwareSourceCode @<Software> AND {
+	rdf:type [ schema:SoftwareSourceCode ] ;
+}
+
+schema:Person @schema:ThingWithoutName AND IRI {
+	rdf:type [ schema:Person ] ;
+	schema:email xsd:string * ;
+	(schema:name xsd:string |
+	(schema:givenName xsd:string ;
+	schema:familyName xsd:string )) ;
+	schema:affiliation @schema:Organization * ;
+}
+
+schema:Organization @schema:Thing AND IRI {
+	rdf:type [ schema:Organization ] ;
+	schema:address @schema:PostalAddress OR xsd:string ? ;
+	schema:email xsd:string * ;
+}
+
+schema:Role IRI OR Bnode {
+	rdf:type [ schema:Role ] ;
+	schema:author @schema:Person OR @schema:Organization ? ; #This has been made optional to comply with the CodeMeta generator validator
+	schema:roleName xsd:string OR IRI ;
+	schema:endDate xsd:date OR xsd:dateTime ? ;
+	schema:startDate xsd:date OR xsd:dateTime ? ;
+}
+
+schema:CreativeWork @schema:Thing AND IRI {
+	rdf:type [ schema:CreativeWork ] ;
+}
+
+schema:MediaObject @schema:Thing AND IRI OR Bnode {
+	rdf:type [ schema:MediaObject ] ;
+}
+
+schema:ComputerLanguage @schema:Thing AND IRI {
+	rdf:type [ schema:ComputerLanguage ] ;
+}
+
+schema:Review @schema:Thing AND IRI {
+	rdf:type [ schema:Review ] ;
+	schema:reviewAspect xsd:string ? ;
+	schema:reviewBody xsd:string ? ;
+}
+
+schema:DataFeed @schema:Thing AND IRI {
+	rdf:type [ schema:DataFeed ] ;
+}
+
+schema:PostalAddress @schema:Thing AND IRI {
+	rdf:type [ schema:PostalAddress ] ;
+	schema:email xsd:string * ;
+}
+
+schema:Thing @schema:ThingWithoutName AND {
+	schema:name xsd:string ;
+}
+
+schema:ThingWithoutName {
+	schema:description xsd:string ? ;
+	schema:identifier IRI OR xsd:string ? ;
+	schema:sameAs IRI * ;
+	schema:url IRI * ;
+}
+

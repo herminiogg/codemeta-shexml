@@ -1,0 +1,56 @@
+{
+    "@context": {
+        "@vocab": "https://w3id.org/codemeta/3.0/",
+        "schema": "http://schema.org/",
+        "id": "@id",
+        "type": "@type",
+        "name": {
+            "@id": "schema:name"
+        },
+        "license": {
+            "@id": "schema:license",
+            "@type": "@id"
+        },
+        "issueTracker": {
+            "@id": "https://w3id.org/codemeta/3.0/issueTracker",
+            "@type": "@id"
+        },
+        "identifier": {
+            "@id": "schema:identifier"
+        },
+        "dateCreated": {
+            "@id": "schema:dateCreated",
+            "@type": "http://www.w3.org/2001/XMLSchema#date"
+        },
+        "codeRepository": {
+            "@id": "schema:codeRepository",
+            "@type": "@id"
+        },
+        "description": {
+            "@id": "schema:description"
+        },
+        "dateModified": {
+            "@id": "schema:dateModified",
+            "@type": "http://www.w3.org/2001/XMLSchema#date"
+        },
+        "downloadUrl": {
+            "@id": "schema:downloadUrl",
+            "@type": "@id"
+        },
+        "author": {
+            "@id": "schema:author",
+            "@type": "@id"
+        },
+        "programmingLanguage": {
+            "@id": "schema:programmingLanguage"
+        },
+        "Person": {
+            "@id": "schema:Person"
+        },
+      	"SoftwareSourceCode": {
+            "@id": "schema:SoftwareSourceCode"
+        }
+    },
+    "@id": "http://example.org/ShExML",
+    "@type": "schema:SoftwareSourceCode"
+}

@@ -1,0 +1,52 @@
+{
+    "@context": {
+        "@vocab": "https://w3id.org/codemeta/3.0/",
+        "schema": "http://schema.org/",
+        "id": "@id",
+        "type": "@type",
+        "name": {
+            "@id": "schema:name"
+        },
+        "affiliation": {
+            "@id": "schema:affiliation",
+            "@type": "@id"
+        },
+        "datePublished": {
+            "@id": "schema:datePublished",
+            "@type": "http://www.w3.org/2001/XMLSchema#date"
+        },
+        "license": {
+            "@id": "schema:license",
+            "@type": "@id"
+        },
+        "version": {
+            "@id": "schema:version"
+        },
+        "description": {
+            "@id": "schema:description"
+        },
+        "identifier": {
+            "@id": "schema:identifier"
+        },
+        "author": {
+            "@id": "schema:author"
+        },
+        "SoftwareSourceCode": {
+            "@id": "schema:SoftwareSourceCode"
+        },
+        "Person": {
+            "@id": "schema:Person"
+        },
+        "Organization": {
+            "@id": "schema:Organization"
+        }
+    },
+    "@id": "http://example.org/ShExML",
+    "@type": "schema:SoftwareSourceCode",
+    "author": {
+        "@type": "schema:Person"
+    },
+    "softwareRequirements": {
+        "@type": "schema:SoftwareSourceCode"
+    }
+}

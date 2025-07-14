@@ -1,0 +1,42 @@
+{
+    "@context": {
+        "@vocab": "https://w3id.org/codemeta/3.0/",
+        "schema": "http://schema.org/",
+        "id": "@id",
+        "type": "@type",
+        "name": {
+            "@id": "schema:name"
+        },
+        "version": {
+            "@id": "schema:version"
+        },
+        "softwareRequirements": {
+            "@id": "schema:softwareRequirements",
+            "@type": "@id",
+          	"@container": "@set"
+        },
+        "codeRepository": {
+            "@id": "schema:codeRepository",
+            "@type": "@id"
+        },
+        "description": {
+            "@id": "schema:description"
+        },
+        "identifier": {
+            "@id": "schema:identifier"
+        },
+        "license": {
+            "@id": "schema:license",
+            "@type": "@id"
+        },
+        "SoftwareSourceCode": {
+            "@id": "schema:SoftwareSourceCode"
+        }
+    },
+    "@id": "http://example.org/ShExML",
+    "@type": "schema:SoftwareSourceCode",
+    "softwareRequirements": [{
+      "@explicit": true,
+      "@embed": "@never"
+    }]
+}

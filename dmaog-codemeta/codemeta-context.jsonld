@@ -1,40 +1,116 @@
 {
-    "@context": { 
+    "@context": {
         "@vocab": "https://w3id.org/codemeta/3.0/",
         "schema": "http://schema.org/",
         "id": "@id",
         "type": "@type",
+        "name": {
+            "@id": "schema:name"
+        },
+        "version": {
+            "@id": "schema:version"
+        },
         "identifier": {
+            "@id": "schema:identifier",
             "@type": "@id"
         },
-        "codeRepository": {
+        "email": {
+            "@id": "schema:email"
+        },
+        "affiliation": {
+            "@id": "schema:affiliation",
             "@type": "@id"
+        },
+        "familyName": {
+            "@id": "schema:familyName"
+        },
+        "givenName": {
+            "@id": "schema:givenName"
+        },
+        "roleName": {
+            "@id": "schema:roleName"
+        },
+        "author": {
+            "@id": "schema:author",
+            "@type": "@id"
+        },
+        "dateCreated": {
+            "@id": "schema:dateCreated",
+            "@type": "http://www.w3.org/2001/XMLSchema#date"
+        },
+        "softwareRequirements": {
+            "@id": "schema:softwareRequirements",
+            "@type": "@id"
+        },
+        "developmentStatus": {
+            "@id": "schema:developmentStatus"
         },
         "issueTracker": {
-            "@type": "@id"
-        },
-        "downloadUrl": {
-            "@type": "@id"
-        },
-        "license": {
-            "@type": "@id"
-        },
-        "schema:author": {
+            "@id": "https://w3id.org/codemeta/3.0/issueTracker",
             "@type": "@id"
         },
         "referencePublication": {
+            "@id": "https://w3id.org/codemeta/3.0/referencePublication",
             "@type": "@id"
+        },
+        "applicationCategory": {
+            "@id": "schema:applicationCategory"
+        },
+        "dateModified": {
+            "@id": "schema:dateModified",
+            "@type": "http://www.w3.org/2001/XMLSchema#date"
+        },
+        "runtimePlatform": {
+            "@id": "schema:runtimePlatform"
+        },
+        "codeRepository": {
+            "@id": "schema:codeRepository",
+            "@type": "@id"
+        },
+        "description": {
+            "@id": "schema:description"
+        },
+        "downloadUrl": {
+            "@id": "schema:downloadUrl",
+            "@type": "@id"
+        },
+        "license": {
+            "@id": "schema:license",
+            "@type": "@id"
+        },
+        "programmingLanguage": {
+            "@id": "schema:programmingLanguage"
+        },
+        "contributor": {
+            "@id": "schema:contributor",
+            "@type": "@id"
+        },
+        "releaseNotes": {
+            "@id": "schema:releaseNotes"
+        },
+        "SoftwareSourceCode": {
+            "@id": "schema:SoftwareSourceCode"
+        },
+        "Person": {
+            "@id": "schema:Person"
+        },
+        "Organization": {
+            "@id": "schema:Organization"
+        },
+        "Role": {
+            "@id": "schema:Role"
         }
     },
-    "@id" : "https://github.com/herminiogg/dmaog",
+    "@id": "https://github.com/herminiogg/dmaog",
     "@type": "SoftwareSourceCode",
     "author": {
-        "@type": ["Role", "Person"],
-        "schema:author": {
-            "@type": "Person",
-            "@embed": "@never"
-        }
+        "@type": [
+            "Role",
+            "Person"
+        ]
     },
-    "softwareRequirements": { "@type": "SoftwareSourceCode"}
+    "softwareRequirements": [{
+      "@explicit": true,
+      "@embed": "@never"
+    }]
 }
-  

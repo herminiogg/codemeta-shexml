@@ -1,14 +1,16 @@
 PREFIX codemeta: <https://w3id.org/codemeta/3.0/>
+PREFIX schema: <http://schema.org/>
 PREFIX ex: <http://example.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 SOURCE repo_info <https://api.github.com/repos/herminiogg/ShExML>
-FUNCTIONS helper <scala: https://raw.githubusercontent.com/herminiogg/codemeta-shexml/main/functions.scala>
+FUNCTIONS helper <scala: ../functions.scala>
 ITERATOR gh <jsonpath: $> {
     FIELD id <id>
     FIELD name <name>
     FIELD description <description>
     FIELD codeRepository <html_url>
     FIELD language <language>
-    FIELD archive_url <archive_url>
+    FIELD releases_url <releases_url>
     FIELD author <owner.html_url>
     FIELD dateCreated <created_at>
     FIELD dateModified <updated_at>
@@ -18,18 +20,18 @@ ITERATOR gh <jsonpath: $> {
 }
 EXPRESSION md <repo_info.gh>
 
-codemeta:SoftwareSourceCode ex:[md.name] {
-    a codemeta:SoftwareSourceCode ;
-    codemeta:identifier [md.id] ;
-    codemeta:name [md.name] ;
-    codemeta:description [md.description] ;
-    codemeta:codeRepository [md.codeRepository] ;
-    codemeta:programmingLanguage [md.language] ;
-    codemeta:downloadUrl [md.archive_url] ;
-    codemeta:author [md.author] ;
-    codemeta:dateCreated [helper.onlyDate(md.dateCreated)] ;
-    codemeta:dateModified [helper.onlyDate(md.dateModified)] ;
-    codemeta:keywords [md.keywords] ;
-    codemeta:license [md.license] ;
-    codemeta:issueTracker [md.issueTracker] ;
+schema:SoftwareSourceCode ex:[md.name] {
+    a schema:SoftwareSourceCode ;
+    schema:identifier [md.id] ;
+    schema:name [md.name] ;
+    schema:description [md.description] ;
+    schema:codeRepository [md.codeRepository] ;
+    schema:programmingLanguage [md.language] ;
+    schema:downloadUrl [helper.normalizeGitHubAPIUrl(md.releases_url)] ;
+    schema:author [md.author] ;
+    schema:dateCreated [helper.onlyDate(md.dateCreated)] xsd:date ;
+    schema:dateModified [helper.onlyDate(md.dateModified)] xsd:date ;
+    schema:keywords [md.keywords] ;
+    schema:license [md.license] ;
+    codemeta:issueTracker [helper.normalizeGitHubAPIUrl(md.issueTracker)] ;
 }

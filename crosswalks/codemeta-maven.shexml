@@ -1,6 +1,7 @@
 PREFIX codemeta: <https://w3id.org/codemeta/3.0/>
+PREFIX schema: <http://schema.org/>
 PREFIX ex: <http://example.org/>
-SOURCE repo_info <https://repo1.maven.org/maven2/com/herminiogarcia/shexml_3/0.5.3/shexml_3-0.5.3.pom>
+SOURCE repo_info <https://repo1.maven.org/maven2/com/herminiogarcia/shexml_3/0.5.4/shexml_3-0.5.4.pom>
 FUNCTIONS helper <scala: https://raw.githubusercontent.com/herminiogg/codemeta-shexml/main/functions.scala>
 ITERATOR maven <xpath: /node()[local-name(.)='project']> {
     FIELD id <node()[local-name(.)='groupId']>
@@ -19,21 +20,21 @@ ITERATOR maven <xpath: /node()[local-name(.)='project']> {
 }
 EXPRESSION md <repo_info.maven>
 
-codemeta:SoftwareSourceCode ex:[md.name] {
-    a codemeta:SoftwareSourceCode ;
-    codemeta:identifier [md.id] ;
-    codemeta:name [md.name] ;
-    codemeta:description [md.description] ;
-    codemeta:codeRepository [md.codeRepository] ;
-    codemeta:license [md.license] ;
-    codemeta:version [md.version] ;
+schema:SoftwareSourceCode ex:[md.name] {
+    a schema:SoftwareSourceCode ;
+    schema:identifier [md.id] ;
+    schema:name [md.name] ;
+    schema:description [md.description] ;
+    schema:codeRepository [md.codeRepository] ;
+    schema:license [md.license] ;
+    schema:version [md.version] ;
     codemeta:continuousIntegration [md.continuousIntegration] ;
     codemeta:issueTracker [md.issueTracker] ;
-    codemeta:softwareRequirements @ex:Dependency ;
+    schema:softwareRequirements @ex:Dependency ;
 }
 
 ex:Dependency ex:[md.softwareRequirements.artifactId] {
-    a codemeta:SoftwareSourceCode ;
-    codemeta:name [helper.concatenateMavenGroupAndArtifactIds(md.softwareRequirements.groupdId, md.softwareRequirements.artifactId)] ;
-    codemeta:version [md.softwareRequirements.version] ;
+    a schema:SoftwareSourceCode ;
+    schema:name [helper.concatenateMavenGroupAndArtifactIds(md.softwareRequirements.groupdId, md.softwareRequirements.artifactId)] ;
+    schema:version [md.softwareRequirements.version] ;
 }

@@ -5,9 +5,17 @@ class Helper {
 
     def getLocalPartGithubRepo(url: String): String = url.replace("https://github.com/", "")
 
+    def getLocalPartGithubRepoToLowerCase(url: String): String = getLocalPartGithubRepo(url).toLowerCase
+
     def concatenateMavenGroupAndArtifactIds(groupdId: String, artifactId: String): String = groupdId + ":" + artifactId
 
     def removeParametersGithubAPI(url: String): String = url.split("\\{")(0)
+
+    def normalizeGitHubAPIUrl(url: String): String = {
+        url.replace("api.", "")
+            .replace("/repos", "")
+            .replaceAll("\\{.+\\}", "")
+    }
 
     def licenseToURL(license: String): String = {
         if(license.contains("mit")) "https://opensource.org/license/MIT"

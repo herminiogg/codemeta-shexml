@@ -1,33 +1,63 @@
 {
   "@context" : {
     "@vocab" : "https://w3id.org/codemeta/3.0/",
+    "schema" : "http://schema.org/",
     "id" : "@id",
+    "type" : "@type",
+    "name" : {
+      "@id" : "schema:name"
+    },
+    "affiliation" : {
+      "@id" : "schema:affiliation",
+      "@type" : "@id"
+    },
+    "datePublished" : {
+      "@id" : "schema:datePublished",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
     "license" : {
+      "@id" : "schema:license",
       "@type" : "@id"
     },
-    "codeRepository" : {
-      "@type" : "@id"
+    "version" : {
+      "@id" : "schema:version"
     },
-    "issueTracker" : {
-      "@type" : "@id"
+    "description" : {
+      "@id" : "schema:description"
+    },
+    "identifier" : {
+      "@id" : "schema:identifier"
+    },
+    "author" : {
+      "@id" : "schema:author"
+    },
+    "SoftwareSourceCode" : {
+      "@id" : "schema:SoftwareSourceCode"
+    },
+    "Person" : {
+      "@id" : "schema:Person"
+    },
+    "Organization" : {
+      "@id" : "schema:Organization"
     }
   },
   "id" : "http://example.org/ShExML",
-  "@type" : "SoftwareSourceCode",
+  "type" : "SoftwareSourceCode",
   "author" : {
-    "id" : "http://example.org/Herminio_García_González",
-    "@type" : "Person",
+    "id" : "http://example.org/García-González__Herminio",
+    "type" : "Person",
     "affiliation" : {
       "id" : "http://example.org/Kazerne_Dossin",
-      "@type" : "Organization",
+      "type" : "Organization",
       "name" : "Kazerne Dossin"
     },
-    "name" : "Herminio García González"
+    "identifier" : "0000-0001-5590-4857",
+    "name" : "García-González, Herminio"
   },
-  "datePublished" : "2024-06-27",
-  "description" : "<h2>What's Changed</h2>\n<ul>\n<li>Solved a performance problem when executing functions over big data sources</li>\n</ul>",
-  "identifier" : "12569454",
+  "datePublished" : "2025-07-08",
+  "description" : "Shape Expressions Mapping Language (ShExML) is a DSL that offers a solution for mapping and merging heterogeneous data sources. As being based on ShEx the shape is the main foundation to define the transformations.",
+  "identifier" : "15837379",
   "license" : "https://opensource.org/license/MIT",
-  "name" : "herminiogg/ShExML: Version 0.5.3",
-  "version" : "v0.5.3"
+  "name" : "ShExML",
+  "version" : "v0.5.4"
 }
