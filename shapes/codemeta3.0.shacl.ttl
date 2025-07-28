@@ -1,0 +1,602 @@
+@prefix codemeta: <https://w3id.org/codemeta/3.0/> .
+@prefix schema: <http://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+
+codemeta:Software
+  a               sh:NodeShape , rdfs:Class ;
+  rdfs:subClassOf schema:Thing ;
+  sh:node         schema:Thing ;
+  sh:property     [ sh:path schema:applicationCategory ;
+                    sh:maxCount 1 ;
+                    sh:or (
+                      [
+                        sh:datatype xsd:string
+                      ]
+                      [
+                        sh:nodeKind sh:IRI 
+                      ]
+                    ) ;
+                    sh:datatype xsd:string 
+                  ] ;
+  sh:property     [ sh:path schema:applicationSubCategory ;
+                    sh:maxCount 1 ;
+                    sh:or (
+                      [
+                        sh:datatype xsd:string
+                      ]
+                      [
+                        sh:nodeKind sh:IRI 
+                      ]
+                    ) ;
+                    sh:datatype xsd:string
+                  ] ;
+  sh:property     [ sh:path schema:author ;
+                    sh:or (
+                      [
+                        sh:node schema:Person 
+                      ]
+                      [
+                        sh:node schema:Organization
+                      ]
+                      [
+                        sh:node schema:Role
+                      ]
+                    ) ;
+                  ] ;
+  sh:property     [ sh:path schema:citation ;
+                    sh:maxCount 1 ;
+                    sh:or (
+                      [
+                        sh:node schema:CreativeWork 
+                      ]
+                      [
+                        sh:nodeKind sh:IRI
+                      ]
+                      [
+                        sh:node schema:Role
+                      ]
+                    ) ;
+                  ] ;
+  sh:property     [ sh:path schema:codeRepository ;
+                    sh:maxCount 1 ;
+                    sh:nodeKind sh:IRI                     
+                  ] ;
+  sh:property     [ sh:path schema:contributor ;
+                    sh:or (
+                      [
+                        sh:node schema:Person 
+                      ]
+                      [
+                        sh:node schema:Organization
+                      ]
+                    ) ;
+                  ] ;
+  sh:property     [ sh:path schema:copyrightHolder ;
+                    sh:or (
+                      [
+                        sh:node schema:Person 
+                      ]
+                      [
+                        sh:node schema:Organization
+                      ]
+                    ) ;
+                  ] ;
+  sh:property     [ sh:path schema:copyrightYear ;
+                    sh:maxCount 1 ;
+                    sh:datatype xsd:integer                     
+                  ] ;
+  sh:property     [ sh:path schema:dateCreated ;
+                    sh:maxCount 1 ;
+                    sh:datatype xsd:date                    
+                  ] ;
+  sh:property     [ sh:path schema:dateModified ;
+                    sh:maxCount 1 ;
+                    sh:datatype xsd:date                     
+                  ] ;
+  sh:property     [ sh:path schema:datePublished ;
+                    sh:maxCount 1 ;
+                    sh:datatype xsd:date                     
+                  ] ;
+  sh:property     [ sh:path schema:downloadUrl ;
+                    sh:maxCount 1 ;
+                    sh:nodeKind sh:IRI 
+                  ] ;
+  sh:property     [ sh:path schema:editor ;
+                    sh:node schema:Person 
+                  ] ;
+  sh:property     [ sh:path schema:encoding ;
+                    sh:maxCount 1 ;
+                    sh:node schema:MediaObject 
+                  ] ;
+  sh:property     [ sh:path schema:fileFormat ;
+                    sh:maxCount 1 ;
+                    sh:or (
+                      [
+                        sh:datatype xsd:string 
+                      ]
+                      [
+                        sh:nodeKind sh:IRI
+                      ]
+                    ) ;
+                  ] ;
+  sh:property     [ sh:path schema:fileSize ;
+                    sh:maxCount 1 ;
+                    sh:datatype xsd:string 
+                  ] ;
+  sh:property     [ sh:path schema:funder ;
+                    sh:or (
+                      [
+                        sh:node schema:Organization
+                      ]
+                      [
+                        sh:node sh:Person
+                      ]
+                    ) ;
+                  ] ;
+  sh:property     [ sh:path schema:hasPart ;
+                    sh:node schema:CreativeWork 
+                  ] ;
+  sh:property     [ sh:path schema:installUrl ;
+                    sh:maxCount 1 ;
+                    sh:nodeKind sh:IRI 
+                  ] ;
+  sh:property     [ sh:path schema:isAccesibleForFree ;
+                    sh:maxCount 1 ;
+                    sh:datatype xsd:boolean 
+                  ] ;
+  sh:property     [ sh:path schema:isPartOf ;
+                    sh:node schema:CreativeWork 
+                  ] ;
+  sh:property     [ sh:path schema:keywords ;
+                    sh:datatype xsd:string 
+                  ] ;
+  sh:property     [ sh:path schema:license ;
+                    sh:maxCount 1 ;
+                    sh:or (
+                      [
+                        sh:node schema:CreativeWork
+                      ]
+                      [
+                        sh:nodeKind sh:IRI
+                      ]
+                    ) ;
+                  ] ;
+  sh:property     [ sh:path schema:memoryRequirements ;
+                    sh:maxCount 1 ;
+                    sh:or (
+                      [
+                        sh:datatype xsd:string
+                      ]
+                      [
+                        sh:nodeKind sh:IRI
+                      ]
+                    ) ;
+                  ] ;
+  sh:property     [ sh:path schema:operatingSystem ;
+                    sh:maxCount 1 ;
+                    sh:datatype xsd:string 
+                  ] ;
+  sh:property     [ sh:path schema:permissions ;
+                    sh:maxCount 1 ;
+                    sh:datatype xsd:string 
+                  ] ;
+  sh:property     [ sh:path schema:position ;
+                    sh:maxCount 1 ;
+                    sh:or (
+                      [
+                        sh:datatype xsd:integer
+                      ]
+                      [
+                        sh:datatype xsd:string
+                      ]
+                    ) ;
+                  ] ;
+  sh:property     [ sh:path schema:processorRequirements ;
+                    sh:maxCount 1 ;
+                    sh:datatype xsd:string 
+                  ] ;
+  sh:property     [ sh:path schema:producer ;
+                    sh:or (
+                      [
+                        sh:node schema:Organization
+                      ]
+                      [
+                        sh:node schema:Person
+                      ]
+                    ) ;
+                  ] ;
+  sh:property     [ sh:path schema:programmingLanguage ;
+                    sh:or (
+                      [
+                        sh:node schema:ComputerLanguage
+                      ]
+                      [
+                        sh:datatype xsd:string
+                      ]
+                    ) ;
+                  ] ;
+  sh:property     [ sh:path schema:provider ;
+                    sh:maxCount 1 ;
+                    sh:or (
+                      [
+                        sh:node schema:Organization
+                      ]
+                      [
+                        sh:node schema:Person
+                      ]
+                    ) ;
+                  ] ;
+  sh:property     [ sh:path schema:publisher ;
+                    sh:maxCount 1 ;
+                    sh:or (
+                      [
+                        sh:node schema:Organization
+                      ]
+                      [
+                        sh:node schema:Person
+                      ]
+                    ) ;
+                  ] ;
+  sh:property     [ sh:path schema:relatedLink ;
+                    sh:nodeKind sh:IRI 
+                  ] ;
+  sh:property     [ sh:path schema:releaseNotes ;
+                    sh:maxCount 1 ;
+                    sh:or (
+                      [
+                        sh:datatype xsd:string
+                      ]
+                      [
+                        sh:nodeKind sh:IRI
+                      ]
+                    ) ;
+                  ] ;
+  sh:property     [ sh:path schema:review ;
+                    sh:node schema:Review 
+                  ] ;
+  sh:property     [ sh:path schema:runtimePlatform ;
+                    sh:datatype xsd:string 
+                  ] ;
+  sh:property     [ sh:path schema:softwareHelp ;
+                    sh:maxCount 1 ;
+                    sh:node schema:CreativeWork 
+                  ] ;
+  sh:property     [ sh:path schema:softwareRequirements ;
+                    sh:node schema:SoftwareSourceCode ; 
+                  ] ;
+  sh:property     [ sh:path schema:softwareVersion ;
+                    sh:maxCount 1 ;
+                    sh:datatype xsd:string 
+                  ] ;
+  sh:property     [ sh:path schema:sponsor ;
+                    sh:or (
+                      [
+                        sh:node schema:Organization
+                      ]
+                      [
+                        sh:node schema:Person
+                      ]
+                    ) ;
+                  ] ;
+  sh:property     [ sh:path schema:storageRequirements ;
+                    sh:maxCount 1 ;
+                    sh:or (
+                      [
+                        sh:datatype xsd:string
+                      ]
+                      [
+                        sh:nodeKind sh:IRI
+                      ]
+                    ) ;
+                  ] ;
+  sh:property     [ sh:path schema:supportingData ;
+                    sh:maxCount 1 ;
+                    sh:node schema:DataFeed 
+                  ] ;
+  sh:property     [ sh:path schema:targetProduct ;
+                    sh:maxCount 1 ;
+                    sh:node schema:SoftwareApplication 
+                  ] ;
+  sh:property     [ sh:path schema:version ;
+                    sh:maxCount 1 ;
+                    sh:or (
+                      [
+                        sh:datatype xsd:string
+                      ]
+                      [
+                        sh:datatype xsd:integer
+                      ]
+                    ) ;
+                  ] ;
+  sh:property     [ sh:path codemeta:buildInstructions ;
+                    sh:maxCount 1 ;
+                    sh:nodeKind sh:IRI 
+                  ] ;
+  sh:property     [ sh:path codemeta:continuousIntegration ;
+                    sh:maxCount 1 ;
+                    sh:nodeKind sh:IRI 
+                  ] ;
+  sh:property     [ sh:path codemeta:developmentStatus ;
+                    sh:maxCount 1 ;
+                    sh:datatype xsd:string 
+                  ] ;
+  sh:property     [ sh:path codemeta:embargoEndDate ;
+                    sh:maxCount 1 ;
+                    sh:datatype xsd:date 
+                  ] ;
+  sh:property     [ sh:path codemeta:funding ;
+                    sh:datatype xsd:string 
+                  ] ;
+  sh:property     [ sh:path codemeta:hasSourceCode ;
+                    sh:maxCount 1 ;
+                    sh:node schema:SoftwareSourceCode 
+                  ] ;
+  sh:property     [ sh:path codemeta:isSourceCodeOf ;
+                    sh:maxCount 1 ;
+                    sh:node schema:SoftwareSourceCode 
+                  ] ;
+  sh:property     [ sh:path codemeta:issueTracker ;
+                    sh:maxCount 1 ;
+                    sh:nodeKind sh:IRI 
+                  ] ;
+  sh:property     [ sh:path codemeta:maintainer ;
+                    sh:node schema:Person 
+                  ] ;
+  sh:property     [ sh:path codemeta:readme ;
+                    sh:maxCount 1 ;
+                    sh:nodeKind sh:IRI 
+                  ] ;
+  sh:property     [ sh:path codemeta:referencePublication ;
+                    sh:maxCount 1 ;
+                    sh:or (
+                      [
+                        sh:node schema:ScholarlyArticle
+                      ]
+                      [
+                        sh:nodeKind sh:IRI
+                      ]
+                    ) ;
+                  ] ;
+  sh:property     [ sh:path codemeta:softwareSuggestions ;
+                    sh:node schema:SoftwareSourceCode 
+                  ] .
+
+schema:SoftwareApplication 
+  a               sh:NodeShape , rdfs:Class ;
+  rdfs:subClassOf codemeta:Software ;
+  sh:node         codemeta:Software ;
+  sh:targetClass  schema:SoftwareApplication ;
+  sh:nodeKind     sh:IRI ;
+  sh:property     [ sh:in    ( schema:SoftwareApplication ) ;
+                    sh:path  rdf:type
+                  ] .
+
+schema:SoftwareSourceCode 
+  a               sh:NodeShape , rdfs:Class ;
+  rdfs:subClassOf codemeta:Software ;
+  sh:node         codemeta:Software ;
+  sh:targetClass  schema:SoftwareSourceCode ;
+  sh:nodeKind     sh:IRI ;
+  sh:property     [ sh:in    ( schema:SoftwareSourceCode ) ;
+                    sh:path  rdf:type
+                  ] .
+
+schema:Person
+  a               sh:NodeShape , rdfs:Class ;
+  rdfs:subClassOf schema:ThingWithoutName ;
+  sh:node         schema:ThingWithoutName ;
+  sh:nodeKind     sh:IRI ;
+  sh:property     [ sh:in    ( schema:Person ) ;
+                    sh:path  rdf:type
+                  ] ;
+  sh:property     [ sh:path schema:email ;
+                    sh:datatype xsd:string 
+                  ] ;
+  sh:or (
+    [ sh:property [ sh:path schema:name ;
+                    sh:maxCount 1 ;
+                    sh:minCount 1 ;
+                    sh:datatype xsd:string 
+                  ] ;
+    ]
+    [ sh:property [ sh:path schema:givenName ;
+                    sh:maxCount 1 ;
+                    sh:minCount 1 ;
+                    sh:datatype xsd:string 
+                  ] ;
+      sh:property [ sh:path schema:familyName ;
+                    sh:maxCount 1 ;
+                    sh:minCount 1 ;
+                    sh:datatype xsd:string 
+                  ] ;
+    ]
+  ) ;
+  sh:property     [ sh:path schema:affiliation ;
+                    sh:node schema:Organization 
+                  ] ;
+  sh:targetClass  schema:Person .
+
+schema:Organization
+  a               sh:NodeShape , rdfs:Class ;
+  rdfs:subClassOf schema:Thing ;
+  sh:node         schema:Thing ;
+  sh:nodeKind     sh:IRI ;
+  sh:property     [ sh:in    ( schema:Organization ) ;
+                    sh:path  rdf:type
+                  ] ;
+  sh:property     [ sh:path schema:address ;
+                    sh:maxCount 1 ;
+                    sh:or (
+                      [
+                        sh:node schema:PostalAddress
+                      ]
+                      [
+                        sh:datatype xsd:string
+                      ]
+                    ) ;
+                  ] ;
+  sh:property     [ sh:path schema:email ;
+                    sh:datatype xsd:string 
+                  ] ;
+  sh:targetClass  schema:Organization .
+
+schema:Role
+  a               sh:NodeShape , rdfs:Class ;
+  sh:nodeKind     sh:BlankNodeOrIRI ;
+  sh:property     [ sh:in    ( schema:Role ) ;
+                    sh:path  rdf:type
+                  ] ;
+  sh:property     [ sh:path schema:author ;
+                    sh:maxCount 1 ; #This has been made optional to comply with the CodeMeta generator validator
+                    sh:or (
+                      [
+                        sh:node schema:Person
+                      ]
+                      [
+                        sh:node schema:Organization
+                      ]
+                    ) ;
+                  ] ;
+  sh:property     [ sh:path schema:roleName ;
+                    sh:maxCount 1 ;
+                    sh:minCount 1 ;
+                    sh:or (
+                      [
+                        sh:datatype xsd:string
+                      ]
+                      [
+                        sh:nodeKind sh:IRI
+                      ]
+                    ) ;
+                  ] ;
+  sh:property     [ sh:path schema:endDate ;
+                    sh:maxCount 1 ;
+                    sh:or (
+                      [
+                        sh:datatype xsd:date
+                      ]
+                      [
+                        sh:datatype xsd:dateTime
+                      ]
+                    ) ;
+                  ] ;
+  sh:property     [ sh:path schema:startDate ;
+                    sh:maxCount 1 ;
+                    sh:or (
+                      [
+                        sh:datatype xsd:date
+                      ]
+                      [
+                        sh:datatype xsd:dateTime
+                      ]
+                    ) ;
+                  ] ;
+  sh:targetClass  schema:Role .
+
+schema:CreativeWork
+  a               sh:NodeShape , rdfs:Class ;
+  rdfs:subClassOf schema:Thing ;
+  sh:node         schema:Thing ;
+  sh:nodeKind     sh:IRI ;
+  sh:property     [ sh:in    ( schema:CreativeWork ) ;
+                    sh:path  rdf:type
+                  ] ;
+  sh:targetClass  schema:CreativeWork .
+
+schema:MediaObject
+  a               sh:NodeShape , rdfs:Class ;
+  rdfs:subClassOf schema:Thing ;
+  sh:node         schema:Thing ;
+  sh:nodeKind     sh:BlankNodeOrIRI ;
+  sh:property     [ sh:in    ( schema:MediaObject ) ;
+                    sh:path  rdf:type
+                  ] ;
+  sh:targetClass  schema:MediaObject .
+
+schema:ComputerLanguage
+  a               sh:NodeShape , rdfs:Class ;
+  rdfs:subClassOf schema:Thing ;
+  sh:nodeKind     sh:IRI ;
+  sh:property     [ sh:in    ( schema:ComputerLanguage ) ;
+                    sh:path  rdf:type
+                  ] ;
+  sh:targetClass  schema:ComputerLanguage .
+  
+schema:Review
+  a               sh:NodeShape , rdfs:Class ;
+  rdfs:subClassOf schema:Thing ;
+  sh:node         schema:Thing ;
+  sh:nodeKind     sh:IRI ;
+  sh:property     [ sh:in    ( schema:Review ) ;
+                    sh:path  rdf:type
+                  ] ;
+  sh:property     [ sh:path schema:reviewAspect ;
+                    sh:maxCount 1 ;
+                    sh:datatype xsd:string 
+                  ] ;
+  sh:property     [ sh:path schema:reviewBody ;
+                    sh:maxCount 1 ;
+                    sh:datatype xsd:string 
+                  ] ;
+  sh:targetClass  schema:Review .
+
+schema:DataFeed
+  a               sh:NodeShape , rdfs:Class ;
+  rdfs:subClassOf schema:Thing ;
+  sh:node         schema:Thing ;
+  sh:nodeKind     sh:IRI ;
+  sh:property     [ sh:in    ( schema:DataFeed ) ;
+                    sh:path  rdf:type
+                  ] ;
+  sh:targetClass  schema:DataFeed .
+
+schema:PostalAddress
+  a               sh:NodeShape , rdfs:Class ;
+  rdfs:subClassOf schema:Thing ;
+  sh:node         schema:Thing ;
+  sh:nodeKind     sh:IRI ;
+  sh:property     [ sh:in    ( schema:PostalAddress ) ;
+                    sh:path  rdf:type
+                  ] ;
+  sh:property     [ sh:path schema:email ;
+                    sh:datatype xsd:string 
+                  ] ;
+  sh:targetClass  schema:PostalAddress .
+
+schema:ThingWithoutName
+  a               sh:NodeShape , rdfs:Class ;
+  sh:property     [ sh:path schema:identifier ;
+                    sh:maxCount 1 ;
+                    sh:or (
+                      [
+                        sh:nodeKind sh:IRI
+                      ]
+                      [
+                        sh:datatype xsd:string
+                      ]
+                    ) ;
+                  ] ;
+  sh:property     [ sh:path schema:description ;
+                    sh:maxCount 1 ;
+                    sh:datatype xsd:string 
+                  ] ;
+  sh:property     [ sh:path schema:url ;
+                    sh:nodeKind sh:IRI 
+                  ] ;
+  sh:property     [ sh:path schema:sameAs ;
+                    sh:nodeKind sh:IRI 
+                  ] .
+
+schema:Thing
+  a               sh:NodeShape , rdfs:Class ;
+  rdfs:subClassOf schema:ThingWithoutName ;
+  sh:node         schema:ThingWithoutName ;
+  sh:property     [ sh:path schema:name ;
+                    sh:maxCount 1 ;
+                    sh:minCount 1 ;
+                    sh:datatype xsd:string 
+                  ] ;

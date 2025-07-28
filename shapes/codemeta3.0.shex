@@ -5,7 +5,6 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 
 <Software> @schema:Thing AND IRI AND {
 	# Properties from schema.org
-	rdf:type [ schema:SoftwareSourceCode schema:SoftwareApplication ] ;
 	schema:applicationCategory xsd:string OR IRI ? ;
 	schema:applicationSubCategory xsd:string OR IRI ? ;
 	schema:author @schema:Person OR @schema:Organization OR @schema:Role * ;
@@ -43,7 +42,7 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 	schema:review @schema:Review * ;
 	schema:runtimePlatform xsd:string * ;
 	schema:softwareHelp @schema:CreativeWork ? ;
-	schema:softwareRequirements @<Software> * ;
+	schema:softwareRequirements @schema:SoftwareSourceCode * ;
 	schema:softwareVersion xsd:string ? ;
 	schema:sponsor @schema:Organization OR @schema:Person * ;
 	schema:storageRequirements xsd:string OR IRI ? ;
@@ -89,7 +88,7 @@ schema:Organization @schema:Thing AND IRI {
 	schema:email xsd:string * ;
 }
 
-schema:Role IRI OR Bnode {
+schema:Role (IRI OR Bnode) AND {
 	rdf:type [ schema:Role ] ;
 	schema:author @schema:Person OR @schema:Organization ? ; #This has been made optional to comply with the CodeMeta generator validator
 	schema:roleName xsd:string OR IRI ;
@@ -101,7 +100,7 @@ schema:CreativeWork @schema:Thing AND IRI {
 	rdf:type [ schema:CreativeWork ] ;
 }
 
-schema:MediaObject @schema:Thing AND IRI OR Bnode {
+schema:MediaObject @schema:Thing AND (IRI OR Bnode) AND {
 	rdf:type [ schema:MediaObject ] ;
 }
 
