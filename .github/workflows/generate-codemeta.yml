@@ -19,6 +19,9 @@ jobs:
       
       - name: Run CodeMeta generation script
         run: bash generate-all.sh
+
+      - name: Validate generated files
+        run: bash validate-all.sh
       
       - uses: stefanzweifel/git-auto-commit-action@v5
         with: 

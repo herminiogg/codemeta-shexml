@@ -38,8 +38,7 @@
             "@type": "@id"
         },
         "author": {
-            "@id": "schema:author",
-            "@type": "@id"
+            "@id": "schema:author"
         },
         "programmingLanguage": {
             "@id": "schema:programmingLanguage"
@@ -52,5 +51,8 @@
         }
     },
     "@id": "http://example.org/ShExML",
-    "@type": "schema:SoftwareSourceCode"
+    "@type": "schema:SoftwareSourceCode",
+    "author": {
+        "@type": "schema:Person"
+    }
 }

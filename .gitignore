@@ -1,4 +1,5 @@
 *.jar
 apache-jena*
 shexCommandOutput.txt
+shaclCommandOutput.txt
 validationReport.txt
