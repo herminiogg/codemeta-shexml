@@ -6,7 +6,7 @@ echo "" > shaclCommandOutput.txt # Clears the SHACL command output file
 
 if [ ! -d apache-jena ]; then
     echo "Downloading Apache Jena..."
-    curl -L https://dlcdn.apache.org/jena/binaries/apache-jena-5.4.0.zip -o apache-jena.zip
+    curl -L https://dlcdn.apache.org/jena/binaries/apache-jena-5.5.0.zip -o apache-jena.zip
     unzip -q apache-jena.zip -d apache-jena
 fi
 
