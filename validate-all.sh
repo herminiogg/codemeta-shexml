@@ -12,8 +12,8 @@ fi
 
 #export _JAVA_OPTIONS="-Xmx12g"
 
-shex="apache-jena/apache-jena-5.4.0/bin/shex"
-shacl="apache-jena/apache-jena-5.4.0/bin/shacl"
+shex="apache-jena/apache-jena-5.5.0/bin/shex"
+shacl="apache-jena/apache-jena-5.5.0/bin/shacl"
 
 total_non_conformant=0
 
@@ -24,10 +24,10 @@ validate() {
     validation_result=$($shex validate --schema $schema --data $filename -m $shape_map 2>> shexCommandOutput.txt)
     conformant=$(echo "$validation_result" | grep "Status = conformant" | wc -l)
     non_conformant=$(echo "$validation_result" | grep "Status = nonconformant" | wc -l)
-    total_non_conformant=$(($total_non_conformant + non_conformant))
     echo "$validation_result" >> validationReport.txt
     if [ $non_conformant -gt 0 ] || [ $conformant -eq 0 ]; then
         echo "Validating $filename: Error!"
+        total_non_conformant=$(($total_non_conformant + 1))
     else
         echo "Validating $filename: OK"
     fi
@@ -38,12 +38,12 @@ validate_shacl() {
     schema=$2
     validation_result=$($shacl validate --shapes $schema --data $filename 2>> shaclCommandOutput.txt)
     non_conformant=$(echo "$validation_result" | grep "sh:Violation;" | wc -l)  
-    total_non_conformant=$(($total_non_conformant + non_conformant))
     echo "$validation_result" >> validationReport.txt
     if [ $non_conformant -eq 0 ]; then
         echo "Validating $filename: OK"
     else
-         echo "Validating $filename: Error!"
+        echo "Validating $filename: Error!"
+        total_non_conformant=$(($total_non_conformant + 1))
     fi
 }
 
