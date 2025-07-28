@@ -4,7 +4,7 @@
   "author" : "https://github.com/herminiogg",
   "codeRepository" : "https://github.com/herminiogg/ShExML",
   "dateCreated" : "2018-02-22",
-  "dateModified" : "2025-07-08",
+  "dateModified" : "2025-07-18",
   "description" : "A heterogeneous data mapping language based on Shape Expressions",
   "downloadUrl" : "https://github.com/herminiogg/ShExML/releases",
   "identifier" : "122470958",
@@ -38,10 +38,6 @@
     "description" : {
       "@id" : "http://schema.org/description"
     },
-    "dateModified" : {
-      "@id" : "http://schema.org/dateModified",
-      "@type" : "http://www.w3.org/2001/XMLSchema#date"
-    },
     "downloadUrl" : {
       "@id" : "http://schema.org/downloadUrl",
       "@type" : "@id"
@@ -52,6 +48,10 @@
     },
     "programmingLanguage" : {
       "@id" : "http://schema.org/programmingLanguage"
+    },
+    "dateModified" : {
+      "@id" : "http://schema.org/dateModified",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
     },
     "schema" : "http://schema.org/",
     "ex" : "http://example.org/",
