@@ -38,8 +38,7 @@
       "@type" : "@id"
     },
     "author" : {
-      "@id" : "schema:author",
-      "@type" : "@id"
+      "@id" : "schema:author"
     },
     "programmingLanguage" : {
       "@id" : "schema:programmingLanguage"
@@ -53,7 +52,11 @@
   },
   "id" : "http://example.org/ShExML",
   "type" : "SoftwareSourceCode",
-  "author" : "https://github.com/herminiogg",
+  "author" : {
+    "id" : "https://github.com/herminiogg",
+    "type" : "Person",
+    "name" : "herminiogg"
+  },
   "codeRepository" : "https://github.com/herminiogg/ShExML",
   "dateCreated" : "2018-02-22",
   "dateModified" : "2025-07-18",
