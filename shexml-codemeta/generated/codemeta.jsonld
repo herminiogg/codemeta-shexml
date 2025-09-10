@@ -89,6 +89,11 @@
     "name" : "com.typesafe.scala-logging:scala-logging_3",
     "version" : "3.9.5"
   }, {
+    "@id" : "ex:scala-parallel-collections_3",
+    "@type" : "schema:SoftwareSourceCode",
+    "name" : "org.scala-lang.modules:scala-parallel-collections_3",
+    "version" : "1.0.4"
+  }, {
     "@id" : "ex:scala-reflect",
     "@type" : "schema:SoftwareSourceCode",
     "name" : "org.scala-lang:scala-reflect",
@@ -97,7 +102,7 @@
     "@id" : "ex:scala3-library_3",
     "@type" : "schema:SoftwareSourceCode",
     "name" : "org.scala-lang:scala3-library_3",
-    "version" : "3.2.0"
+    "version" : "3.3.6"
   }, {
     "@id" : "ex:scalatest_3",
     "@type" : "schema:SoftwareSourceCode",
@@ -141,18 +146,18 @@
     "codeRepository" : "ghhgg:ShExML",
     "contributor" : "niod_staff:mikebryant",
     "dateCreated" : "2018-02-22",
-    "dateModified" : "2025-07-08",
+    "dateModified" : "2025-09-10",
     "description" : "A heterogeneous data mapping language based on Shape Expressions",
     "developmentStatus" : "active",
     "downloadUrl" : "https://api.github.com/repos/herminiogg/ShExML/downloads",
-    "identifier" : "https://doi.org/10.5281/zenodo.15837379",
+    "identifier" : "https://doi.org/10.5281/zenodo.17092549",
     "license" : "https://api.github.com/licenses/mit",
     "name" : "ShExML",
     "programmingLanguage" : "Scala",
-    "releaseNotes" : "## What's Changed\r\n* Fixed a bug which prevented the generation of a subject based on a condition applied down the hierarchy.\r\n* Added the possibility to get the iteration index as part of a new builtin functions mechanism.\r\n* Iterators and fields can now be placed in any order.\r\n* Allowed the option to use dashes in the variables names.\r\n* Added the possibility to pass autoincrement ids as arguments of a function.\r\n* Added an option to precompile the ShExML input (`-pc` in the CLI) to generate a single version with all the imported files incorporated and check the input for syntactic and grammatical errors. (This should facilitate debugging in these kinds of files.)\r\n* Improved the CLI help message, removing unnecessary nesting of options and grouping them by categories.\r\n* The databases needed for some tests can now be set up locally using Docker (thanks @mikesname for this contribution).\r\n\r\n**Full Changelog**: https://github.com/herminiogg/ShExML/compare/v0.5.3...v0.5.4",
+    "releaseNotes" : "## What's Changed\r\n- Added a parellelisation option in the RDF conversion. You can decide which parts of the execution you want to run in parallel and the number of threads to be used (or let the engine decide based on you hardware specs).\r\n- Stdin can be used as input for the mapping rules or as a input source.\r\n- Some minor fixes and stability improvements.\r\n\r\n**Full Changelog**: https://github.com/herminiogg/ShExML/compare/v0.5.4...v0.6.0",
     "runtimePlatform" : "JVM",
-    "softwareRequirements" : [ "ex:scala-reflect", "ex:scala-csv_2.13", "ex:scalatest_3", "ex:sqlite-jdbc", "ex:mariadb-java-client", "ex:antlr4", "ex:slf4j-nop", "ex:srdf4j_3", "ex:jena-arq", "ex:scala-logging_3", "ex:shex_3", "ex:scala3-library_3", "ex:postgresql", "ex:picocli", "ex:json-path", "ex:mssql-jdbc", "ex:srdf_3", "ex:jena-base", "ex:rmlmapper", "ex:stringdistance_2.13", "ex:mysql-connector-java", "ex:scala-compiler", "ex:jena-core", "ex:logback-classic", "ex:Saxon-HE", "ex:jena-shacl" ],
-    "version" : "0.5.4",
+    "softwareRequirements" : [ "ex:scala-reflect", "ex:scala-csv_2.13", "ex:scalatest_3", "ex:sqlite-jdbc", "ex:mariadb-java-client", "ex:antlr4", "ex:slf4j-nop", "ex:srdf4j_3", "ex:jena-arq", "ex:scala-logging_3", "ex:shex_3", "ex:scala3-library_3", "ex:postgresql", "ex:picocli", "ex:json-path", "ex:mssql-jdbc", "ex:scala-parallel-collections_3", "ex:srdf_3", "ex:jena-base", "ex:rmlmapper", "ex:stringdistance_2.13", "ex:mysql-connector-java", "ex:scala-compiler", "ex:jena-core", "ex:logback-classic", "ex:Saxon-HE", "ex:jena-shacl" ],
+    "version" : "0.6.0",
     "issueTracker" : "https://api.github.com/repos/herminiogg/ShExML/issues",
     "referencePublication" : "https://doi.org/10.7717/peerj-cs.318"
   }, {
@@ -219,6 +224,9 @@
       "@id" : "http://schema.org/softwareRequirements",
       "@type" : "@id"
     },
+    "releaseNotes" : {
+      "@id" : "http://schema.org/releaseNotes"
+    },
     "developmentStatus" : {
       "@id" : "http://schema.org/developmentStatus"
     },
@@ -233,10 +241,6 @@
     "applicationCategory" : {
       "@id" : "http://schema.org/applicationCategory"
     },
-    "dateModified" : {
-      "@id" : "http://schema.org/dateModified",
-      "@type" : "http://www.w3.org/2001/XMLSchema#date"
-    },
     "runtimePlatform" : {
       "@id" : "http://schema.org/runtimePlatform"
     },
@@ -246,6 +250,10 @@
     },
     "description" : {
       "@id" : "http://schema.org/description"
+    },
+    "dateModified" : {
+      "@id" : "http://schema.org/dateModified",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
     },
     "downloadUrl" : {
       "@id" : "http://schema.org/downloadUrl",
@@ -261,9 +269,6 @@
     "contributor" : {
       "@id" : "http://schema.org/contributor",
       "@type" : "@id"
-    },
-    "releaseNotes" : {
-      "@id" : "http://schema.org/releaseNotes"
     },
     "schema" : "http://schema.org/",
     "gh" : "https://github.com/",
