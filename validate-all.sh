@@ -1,6 +1,7 @@
 #!/bin/bash
 
-echo "" > validationReport.txt # Clears the validation report file
+echo "" > shexValidationReport.txt # Clears the ShEx validation report file
+echo "" > shaclValidationReport.txt # Clears the SHACL validation report file
 echo "" > shexCommandOutput.txt # Clears the ShEx command output file
 echo "" > shaclCommandOutput.txt # Clears the SHACL command output file
 
@@ -24,7 +25,7 @@ validate() {
     validation_result=$($shex validate --schema $schema --data $filename -m $shape_map 2>> shexCommandOutput.txt)
     conformant=$(echo "$validation_result" | grep "Status = conformant" | wc -l)
     non_conformant=$(echo "$validation_result" | grep "Status = nonconformant" | wc -l)
-    echo "$validation_result" >> validationReport.txt
+    echo "$validation_result" >> shexValidationReport.txt
     if [ $non_conformant -gt 0 ] || [ $conformant -eq 0 ]; then
         echo "Validating $filename: Error!"
         total_non_conformant=$(($total_non_conformant + 1))
@@ -38,7 +39,7 @@ validate_shacl() {
     schema=$2
     validation_result=$($shacl validate --shapes $schema --data $filename 2>> shaclCommandOutput.txt)
     non_conformant=$(echo "$validation_result" | grep "sh:Violation;" | wc -l)  
-    echo "$validation_result" >> validationReport.txt
+    echo "$validation_result" >> shaclValidationReport.txt
     if [ $non_conformant -eq 0 ]; then
         echo "Validating $filename: OK"
     else

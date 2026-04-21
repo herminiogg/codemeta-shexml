@@ -3,3 +3,5 @@ apache-jena*
 shexCommandOutput.txt
 shaclCommandOutput.txt
 validationReport.txt
+shexValidationReport.txt
+shaclValidationReport.txt

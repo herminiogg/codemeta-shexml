@@ -37,7 +37,6 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 	schema:programmingLanguage @schema:ComputerLanguage OR xsd:string * ;
 	schema:provider @schema:Organization OR @schema:Person ? ;
 	schema:publisher @schema:Organization OR @schema:Person ? ;
-	schema:relatedLink IRI * ;
 	schema:releaseNotes xsd:string OR IRI ? ;
 	schema:review @schema:Review * ;
 	schema:runtimePlatform xsd:string * ;
@@ -65,7 +64,7 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 	codemeta:softwareSuggestions @schema:SoftwareSourceCode * ;
 }
 
-schema:SoftwareApplication @<Sofware> AND {
+schema:SoftwareApplication @<Software> AND {
 	rdf:type [ schema:SoftwareApplication ] ;
 }
 
@@ -132,5 +131,6 @@ schema:ThingWithoutName {
 	schema:identifier IRI OR xsd:string ? ;
 	schema:sameAs IRI * ;
 	schema:url IRI * ;
+	schema:relatedLink IRI * ;
 }
 

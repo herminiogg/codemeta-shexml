@@ -241,9 +241,6 @@ codemeta:Software
                       ]
                     ) ;
                   ] ;
-  sh:property     [ sh:path schema:relatedLink ;
-                    sh:nodeKind sh:IRI 
-                  ] ;
   sh:property     [ sh:path schema:releaseNotes ;
                     sh:maxCount 1 ;
                     sh:or (
@@ -585,6 +582,9 @@ schema:ThingWithoutName
                     sh:datatype xsd:string 
                   ] ;
   sh:property     [ sh:path schema:url ;
+                    sh:nodeKind sh:IRI 
+                  ] ;
+  sh:property     [ sh:path schema:relatedLink ;
                     sh:nodeKind sh:IRI 
                   ] ;
   sh:property     [ sh:path schema:sameAs ;
