@@ -146,7 +146,7 @@
     "codeRepository" : "ghhgg:ShExML",
     "contributor" : "niod_staff:mikebryant",
     "dateCreated" : "2018-02-22",
-    "dateModified" : "2025-09-10",
+    "dateModified" : "2025-10-01",
     "description" : "A heterogeneous data mapping language based on Shape Expressions",
     "developmentStatus" : "active",
     "downloadUrl" : "https://api.github.com/repos/herminiogg/ShExML/downloads",
@@ -154,7 +154,7 @@
     "license" : "https://api.github.com/licenses/mit",
     "name" : "ShExML",
     "programmingLanguage" : "Scala",
-    "releaseNotes" : "## What's Changed\r\n- Added a parellelisation option in the RDF conversion. You can decide which parts of the execution you want to run in parallel and the number of threads to be used (or let the engine decide based on you hardware specs).\r\n- Stdin can be used as input for the mapping rules or as a input source.\r\n- Some minor fixes and stability improvements.\r\n\r\n**Full Changelog**: https://github.com/herminiogg/ShExML/compare/v0.5.4...v0.6.0",
+    "releaseNotes" : "## What's Changed\r\n* Fixed a bug preventing the correct processing of CSV files through the stdin.",
     "runtimePlatform" : "JVM",
     "softwareRequirements" : [ "ex:scala-reflect", "ex:scala-csv_2.13", "ex:scalatest_3", "ex:sqlite-jdbc", "ex:mariadb-java-client", "ex:antlr4", "ex:slf4j-nop", "ex:srdf4j_3", "ex:jena-arq", "ex:scala-logging_3", "ex:shex_3", "ex:scala3-library_3", "ex:postgresql", "ex:picocli", "ex:json-path", "ex:mssql-jdbc", "ex:scala-parallel-collections_3", "ex:srdf_3", "ex:jena-base", "ex:rmlmapper", "ex:stringdistance_2.13", "ex:mysql-connector-java", "ex:scala-compiler", "ex:jena-core", "ex:logback-classic", "ex:Saxon-HE", "ex:jena-shacl" ],
     "version" : "0.6.0",
@@ -224,9 +224,6 @@
       "@id" : "http://schema.org/softwareRequirements",
       "@type" : "@id"
     },
-    "releaseNotes" : {
-      "@id" : "http://schema.org/releaseNotes"
-    },
     "developmentStatus" : {
       "@id" : "http://schema.org/developmentStatus"
     },
@@ -241,6 +238,9 @@
     "applicationCategory" : {
       "@id" : "http://schema.org/applicationCategory"
     },
+    "releaseNotes" : {
+      "@id" : "http://schema.org/releaseNotes"
+    },
     "runtimePlatform" : {
       "@id" : "http://schema.org/runtimePlatform"
     },
@@ -250,10 +250,6 @@
     },
     "description" : {
       "@id" : "http://schema.org/description"
-    },
-    "dateModified" : {
-      "@id" : "http://schema.org/dateModified",
-      "@type" : "http://www.w3.org/2001/XMLSchema#date"
     },
     "downloadUrl" : {
       "@id" : "http://schema.org/downloadUrl",
@@ -269,6 +265,10 @@
     "contributor" : {
       "@id" : "http://schema.org/contributor",
       "@type" : "@id"
+    },
+    "dateModified" : {
+      "@id" : "http://schema.org/dateModified",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
     },
     "schema" : "http://schema.org/",
     "gh" : "https://github.com/",
