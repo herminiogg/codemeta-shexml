@@ -19,5 +19,18 @@ The script will download the latest version of ShExML and will run all the exist
 
 You can differentiate between non-framed and framed JSON-LD results looking to the extension of the generated file: `.jsonld` refers to the non-framed version and `.json` to the framed one.
 
+## Minimum requirements
+| Tool | Version |
+|------|---------|
+| JDK  | 17.x    |
+| Groovy | 4.0.x |
+| Bash | 5.1.x   |
+
+These libraries are downloaded during the execution:
+| Library | Version |
+|---------|---------|
+| ShExML  | 0.5.4   |
+| Apache Jena | 5.5.0 |
+
 ## Funding
 This work has been funded by a cascading grant entitled "2nd open call for Route 2 support - #1 Assessing and improving Research Software" provided by the FAIR-IMPACT project which, in turn, has received funding from the European Commission’s Horizon Europe funding programme for research and innovation programme under the Grant Agreement no. 101057344. The content of this repository does not represent the opinion of the European Commission, and the European Commission is not responsible for any use that might be made of such content.
