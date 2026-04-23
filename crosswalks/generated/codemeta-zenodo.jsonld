@@ -13,12 +13,12 @@
     "@id" : "ex:ShExML",
     "@type" : "schema:SoftwareSourceCode",
     "author" : "ex:García-González__Herminio",
-    "datePublished" : "2025-09-10",
+    "datePublished" : "2025-10-02",
     "description" : "Shape Expressions Mapping Language (ShExML) is a DSL that offers a solution for mapping and merging heterogeneous data sources. As being based on ShEx the shape is the main foundation to define the transformations.",
-    "identifier" : "17092549",
+    "identifier" : "17250444",
     "license" : "https://opensource.org/license/MIT",
     "name" : "ShExML",
-    "version" : "v0.6.0"
+    "version" : "v0.6.1"
   } ],
   "@context" : {
     "name" : {
