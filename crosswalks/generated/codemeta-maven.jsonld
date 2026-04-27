@@ -12,8 +12,8 @@
     "identifier" : "com.herminiogarcia",
     "license" : "https://opensource.org/licenses/MIT",
     "name" : "ShExML",
-    "softwareRequirements" : [ "ex:srdf4j_3", "ex:slf4j-nop", "ex:logback-classic", "ex:scala3-library_3", "ex:jena-arq", "ex:Saxon-HE", "ex:scalatest_3", "ex:scala-csv_2.13", "ex:rmlmapper", "ex:jena-shacl", "ex:picocli", "ex:antlr4", "ex:sqlite-jdbc", "ex:postgresql", "ex:scala-logging_3", "ex:mssql-jdbc", "ex:scala-compiler", "ex:stringdistance_2.13", "ex:shex_3", "ex:jena-core", "ex:json-path", "ex:scala-reflect", "ex:mysql-connector-java", "ex:srdf_3", "ex:mariadb-java-client", "ex:jena-base" ],
-    "version" : "0.5.4"
+    "softwareRequirements" : [ "ex:srdf4j_3", "ex:slf4j-nop", "ex:logback-classic", "ex:scala3-library_3", "ex:jena-arq", "ex:Saxon-HE", "ex:scalatest_3", "ex:scala-csv_2.13", "ex:rmlmapper", "ex:jena-shacl", "ex:picocli", "ex:antlr4", "ex:sqlite-jdbc", "ex:jena-core", "ex:postgresql", "ex:scala-logging_3", "ex:mssql-jdbc", "ex:scala-compiler", "ex:stringdistance_2.13", "ex:shex_3", "ex:scala-parallel-collections_3", "ex:json-path", "ex:scala-reflect", "ex:mysql-connector-java", "ex:srdf_3", "ex:mariadb-java-client", "ex:jena-base" ],
+    "version" : "0.6.1"
   }, {
     "@id" : "ex:antlr4",
     "@type" : "schema:SoftwareSourceCode",
@@ -95,6 +95,11 @@
     "name" : "com.typesafe.scala-logging:scala-logging_3",
     "version" : "3.9.5"
   }, {
+    "@id" : "ex:scala-parallel-collections_3",
+    "@type" : "schema:SoftwareSourceCode",
+    "name" : "org.scala-lang.modules:scala-parallel-collections_3",
+    "version" : "1.0.4"
+  }, {
     "@id" : "ex:scala-reflect",
     "@type" : "schema:SoftwareSourceCode",
     "name" : "org.scala-lang:scala-reflect",
@@ -103,7 +108,7 @@
     "@id" : "ex:scala3-library_3",
     "@type" : "schema:SoftwareSourceCode",
     "name" : "org.scala-lang:scala3-library_3",
-    "version" : "3.2.0"
+    "version" : "3.3.6"
   }, {
     "@id" : "ex:scalatest_3",
     "@type" : "schema:SoftwareSourceCode",

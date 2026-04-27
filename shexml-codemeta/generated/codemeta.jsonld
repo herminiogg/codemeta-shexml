@@ -150,14 +150,14 @@
     "description" : "A heterogeneous data mapping language based on Shape Expressions",
     "developmentStatus" : "active",
     "downloadUrl" : "https://api.github.com/repos/herminiogg/ShExML/downloads",
-    "identifier" : "https://doi.org/10.5281/zenodo.17092549",
+    "identifier" : "https://doi.org/10.5281/zenodo.17250444",
     "license" : "https://api.github.com/licenses/mit",
     "name" : "ShExML",
     "programmingLanguage" : "Scala",
     "releaseNotes" : "## What's Changed\r\n* Fixed a bug preventing the correct processing of CSV files through the stdin.",
     "runtimePlatform" : "JVM",
     "softwareRequirements" : [ "ex:scala-reflect", "ex:scala-csv_2.13", "ex:scalatest_3", "ex:sqlite-jdbc", "ex:mariadb-java-client", "ex:antlr4", "ex:slf4j-nop", "ex:srdf4j_3", "ex:jena-arq", "ex:scala-logging_3", "ex:shex_3", "ex:scala3-library_3", "ex:postgresql", "ex:picocli", "ex:json-path", "ex:mssql-jdbc", "ex:scala-parallel-collections_3", "ex:srdf_3", "ex:jena-base", "ex:rmlmapper", "ex:stringdistance_2.13", "ex:mysql-connector-java", "ex:scala-compiler", "ex:jena-core", "ex:logback-classic", "ex:Saxon-HE", "ex:jena-shacl" ],
-    "version" : "0.6.0",
+    "version" : "0.6.1",
     "issueTracker" : "https://api.github.com/repos/herminiogg/ShExML/issues",
     "referencePublication" : "https://doi.org/10.7717/peerj-cs.318"
   }, {
