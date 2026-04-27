@@ -10,8 +10,8 @@ PREFIX niod_staff: <https://niod.knaw.nl/en/staff/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 SOURCE gh_info <https://api.github.com/repos/herminiogg/ShExML>
 SOURCE gh_releases <https://api.github.com/repos/herminiogg/ShExML/releases>
-SOURCE maven_info <https://repo1.maven.org/maven2/com/herminiogarcia/shexml_3/0.6.0/shexml_3-0.6.0.pom>
-SOURCE zenodo_record <https://zenodo.org/api/records/17092549>
+SOURCE maven_info <https://repo1.maven.org/maven2/com/herminiogarcia/shexml_3/0.6.1/shexml_3-0.6.1.pom>
+SOURCE zenodo_record <https://zenodo.org/api/records/11577338>
 FUNCTIONS helper <scala: https://raw.githubusercontent.com/herminiogg/codemeta-shexml/main/functions.scala>
 ITERATOR gh <jsonpath: $> {
     FIELD description <description>

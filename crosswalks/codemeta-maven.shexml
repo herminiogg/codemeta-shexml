@@ -1,7 +1,7 @@
 PREFIX codemeta: <https://w3id.org/codemeta/3.0/>
 PREFIX schema: <http://schema.org/>
 PREFIX ex: <http://example.org/>
-SOURCE repo_info <https://repo1.maven.org/maven2/com/herminiogarcia/shexml_3/0.5.4/shexml_3-0.5.4.pom>
+SOURCE repo_info <https://repo1.maven.org/maven2/com/herminiogarcia/shexml_3/0.6.1/shexml_3-0.6.1.pom>
 FUNCTIONS helper <scala: https://raw.githubusercontent.com/herminiogg/codemeta-shexml/main/functions.scala>
 ITERATOR maven <xpath: /node()[local-name(.)='project']> {
     FIELD id <node()[local-name(.)='groupId']>
