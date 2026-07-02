@@ -31,7 +31,7 @@ ITERATOR maven <xpath: /node()[local-name(.)='project']> {
     FIELD continuousIntegration <node()[local-name(.)='continuousIntegration']>
     FIELD codeRepository <node()[local-name(.)='scm']/node()[local-name(.)='url']>
     ITERATOR softwareRequirements <node()[local-name(.)='dependencies']/node()[local-name(.)='dependency']> {
-        FIELD groupdId <node()[local-name(.)='groupId']>
+        FIELD groupId <node()[local-name(.)='groupId']>
         FIELD artifactId <node()[local-name(.)='artifactId']>
         FIELD version <node()[local-name(.)='version']>
     }
@@ -105,7 +105,7 @@ ex:Release ghhgg:ShExML {
 
 ex:Dependency ex:[md.softwareRequirements.artifactId] {
     a schema:SoftwareSourceCode ;
-    schema:name [helper.concatenateMavenGroupAndArtifactIds(md.softwareRequirements.groupdId, md.softwareRequirements.artifactId)] ;
+    schema:name [helper.concatenateMavenGroupAndArtifactIds(md.softwareRequirements.groupId, md.softwareRequirements.artifactId)] ;
     schema:version [md.softwareRequirements.version] ;
 }
 

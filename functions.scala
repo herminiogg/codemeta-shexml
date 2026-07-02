@@ -7,7 +7,7 @@ class Helper {
 
     def getLocalPartGithubRepoToLowerCase(url: String): String = getLocalPartGithubRepo(url).toLowerCase
 
-    def concatenateMavenGroupAndArtifactIds(groupdId: String, artifactId: String): String = groupdId + ":" + artifactId
+    def concatenateMavenGroupAndArtifactIds(groupId: String, artifactId: String): String = groupId + ":" + artifactId
 
     def removeParametersGithubAPI(url: String): String = url.split("\\{")(0)
 
