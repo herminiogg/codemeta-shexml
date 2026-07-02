@@ -105,6 +105,9 @@
   "type" : "SoftwareSourceCode",
   "applicationCategory" : "Computer Science",
   "author" : [ {
+    "type" : "Role",
+    "roleName" : "Main author"
+  }, {
     "id" : "https://herminiogarcia.com/#me",
     "type" : "Person",
     "affiliation" : {
@@ -116,9 +119,6 @@
     "familyName" : "García González",
     "givenName" : "Herminio",
     "identifier" : "https://orcid.org/0000-0001-5590-4857"
-  }, {
-    "type" : "Role",
-    "roleName" : "Main author"
   } ],
   "codeRepository" : "https://github.com/herminiogg/dmaog",
   "dateCreated" : "2021-11-24",
